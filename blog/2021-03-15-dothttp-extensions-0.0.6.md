@@ -1,6 +1,10 @@
 ---
 title: dothttp-runner 0.0.6
-slug: dothttp-runner-0.0.6
+author: prasanth
+author_url: https://github.com/cedric05
+tags: [dothttp-runner, vscode]
+description: extension release update.
+hide_table_of_contents: false
 ---
 
 ## Installation Dependency
