@@ -26,7 +26,7 @@ jobs:
           azcliversion: 2.0.72
           inlineScript: |
             cd build
-            az storage blob upload-batch --account-name dothttpdocs -d '$web' -s build
+            az storage blob upload-batch --account-name dothttpdocs -d '$web' -s .
       - name: Purge CDN endpoint
         uses: azure/CLI@v1
         with:
