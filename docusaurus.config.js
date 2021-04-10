@@ -59,7 +59,7 @@ module.exports = {
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/cedric05/dothttp-docs/edit/master/blog/',
+            'https://github.com/cedric05/dothttp-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
