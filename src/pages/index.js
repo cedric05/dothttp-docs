@@ -20,7 +20,7 @@ const features = [
   {
     title: 'Command line support',
     imageUrl: 'img/cli.png',
-    link: "https://github.com/cedric05/dothttp",
+    link: "https://pypi.org/project/dothttp-req/",
     description: (
       <>
         has support to run from command line.
@@ -30,7 +30,7 @@ const features = [
   {
     title: 'opensource',
     imageUrl: 'img/github.png',
-    link: "https://pypi.org/project/dothttp-req/",
+    link: "https://github.com/cedric05/dothttp",
     description: (
       <>
         dothttp is completely opensource and is hosted on github
