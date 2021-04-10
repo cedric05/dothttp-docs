@@ -1,0 +1,36 @@
+name: Deploy endeavour.today
+
+on:
+  push:
+    branches: [ release ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - name: Setup Environment
+        run: |
+          npm install
+          npm run build
+      - name: Upload to blob storage
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            cd build
+            az storage blob upload-batch --account-name dothttpdocs -d '$web' -s build
+      - name: Purge CDN endpoint
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            az cdn endpoint purge --content-paths  "/*" --profile-name "dothttp-docs" --name "dothttp-docs" --resource-group "dothttpdocs"
+      - name: logout
+        run: |
+          az logout
