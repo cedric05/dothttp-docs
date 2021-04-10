@@ -1,5 +1,5 @@
 name: Deploy endeavour.today
-
+# az ad sp create-for-rbac --name "dothttpdocs" --role contributor --scopes /subscriptions/{subscriptionid}/resourceGroups/dothttpdocs  --sdk-auth
 on:
   push:
     branches: [ release ]
@@ -14,6 +14,8 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Setup node
         uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
       - name: Setup Environment
         run: |
           npm install
