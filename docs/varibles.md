@@ -86,3 +86,35 @@ passing properties from command line is not always handy. one can define
   }
 }
 ```
+
+
+## random
+
+while integration testing, having to replace few fields are pain points.
+using $randomStr will generate random string of random length.
+
+- random string ($randomStr)
+- random integer ($randomInt)
+- random float( $randomFloat)
+- random bool ( $randomBool)
+
+```http
+//test.http
+POST https://httpbin.org/post
+json({
+    "full name":  "john {{name=$randomStr:10}}",
+    "name":  "john {{name}}",
+    "height": {{$randomInt:2}},
+})
+```
+name --> shiva + "randomString of length 10 chars"
+height --> randomInteger of length 2
+
+made request will like below
+```shell
+curl -X POST \
+-H 'Content-Length: 73' \
+-H 'Content-Type: application/json' \
+-d '{"full name": "john Z4gi1r8IEX", "name": "john Z4gi1r8IEX", "height": 51}' \
+https://httpbin.org/post
+```
