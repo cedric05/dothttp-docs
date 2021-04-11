@@ -2,13 +2,13 @@
 module.exports = {
   title: 'dothttp',
   tagline: 'http dsl',
-  url: 'https://dcos.dothttp.dev',
+  url: 'https://docs.dothttp.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/rocket.svg',
-  organizationName: 'endeavour', // Usually your GitHub org/user name.
-  projectName: 'dothttp', // Usually your repo name.
+  organizationName: 'cedric05',
+  projectName: 'dothttp-docs', 
   themeConfig: {
     navbar: {
       title: 'dothttp',
