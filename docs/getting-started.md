@@ -11,6 +11,15 @@ If you haven't already, install dothttp via pip:
 pip install dothttp-req
 ```
 
+or via docker
+
+```shell
+docker pull quay.io/cedric05/dothttp
+# docker pull dothttp/dothttp:latest
+# prefer quay.io
+docker run -it --rm -v $(cwd):/http-files dothttp/dothttp
+```
+
 ## Step 2: Create new Http file
 
 simple get request with dothttp
