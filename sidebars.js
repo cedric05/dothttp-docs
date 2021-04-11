@@ -2,7 +2,7 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'Docusaurus Tutorial',
+      label: 'Dothttp Tutorial',
       items: [
         'getting-started',
         'request-basics',
