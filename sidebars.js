@@ -5,10 +5,18 @@ module.exports = {
       label: 'Dothttp Tutorial',
       items: [
         'getting-started',
+        'features',
         'request-basics',
         'varibles',
         'comments',
         'multidef',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'vscode extension',
+      items: [
+        'extension',
       ],
     },
   ],
