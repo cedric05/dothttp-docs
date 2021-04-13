@@ -70,7 +70,7 @@ module.exports = {
               items: [
                   {
                       label: 'contact us',
-                      to: 'mail:prasanth@dothttp.dev',
+                      to: 'mailto:prasanth@dothttp.dev',
                   },
               ],
           }
