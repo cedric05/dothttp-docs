@@ -8,7 +8,7 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/rocket.svg',
   organizationName: 'cedric05',
-  projectName: 'dothttp-docs', 
+  projectName: 'dothttp-docs',
   themeConfig: {
     navbar: {
       title: 'dothttp',
@@ -35,14 +35,45 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Quick links',
           items: [
             {
               label: 'Getting Started',
               to: 'docs/',
-            },
+            },{
+              label: 'Features',
+              to: 'docs/features',
+            },{
+                  label: 'Extension',
+                  to: 'docs/extension',
+              },
           ],
-        }
+        },
+
+          {
+              title: 'Github',
+              items: [
+                  {
+                      label: 'dothttp-core',
+                      to: 'https://github.com/cedric05/dothttp',
+                  },{
+                      label: 'vscode-extension',
+                      to: 'https://github.com/cedric05/dothttp-runner',
+                  },{
+                    label: "echo curlify",
+                      to: "https://github.com/cedric05/dothttp-curlify"
+                  }
+              ],
+          },
+          {
+              title: 'About',
+              items: [
+                  {
+                      label: 'contact us',
+                      to: 'mail:prasanth@dothttp.dev',
+                  },
+              ],
+          }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} dothttp`,
     },
