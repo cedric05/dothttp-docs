@@ -1,7 +1,7 @@
 ---
 title: extension
 
-slug: extension-features
+slug: extension
 ---
 
 ## Basic features

@@ -1,7 +1,7 @@
 ---
 title: features
 
-slug: extension-features
+slug: features
 ---
 
 please visit [dothttp-code](https://marketplace.visualstudio.com/items?itemName=ShivaPrasanth.dothttp-code&ssr=false#qna) for installation.
