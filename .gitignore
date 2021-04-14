@@ -19,3 +19,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .idea
+static/videos/comment.webm
+static/videos/extension-installation.webm
+static/videos/extension-installation2.webm
+static/videos/extra.webm
+static/videos/screen-capture.webm

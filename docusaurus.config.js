@@ -23,7 +23,11 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
+        {
+          label: 'playground (beta)',
+          to: "https://cedric05.github.io/dothttp-playground/", position: 'left'
+        },
         {
           href: 'https://github.com/cedric05/dothttp',
           label: 'GitHub',
@@ -40,40 +44,44 @@ module.exports = {
             {
               label: 'Getting Started',
               to: 'docs/',
-            },{
+            }, {
               label: 'Features',
               to: 'docs/features',
-            },{
-                  label: 'Extension',
-                  to: 'docs/extension',
-              },
+            }, {
+              label: 'Extension',
+              to: 'docs/extension',
+            },
+            {
+              label: 'playground (beta)',
+              to: "https://cedric05.github.io/dothttp-playground/"
+            }
           ],
         },
 
-          {
-              title: 'Github',
-              items: [
-                  {
-                      label: 'dothttp-core',
-                      to: 'https://github.com/cedric05/dothttp',
-                  },{
-                      label: 'vscode-extension',
-                      to: 'https://github.com/cedric05/dothttp-runner',
-                  },{
-                    label: "echo curlify",
-                      to: "https://github.com/cedric05/dothttp-curlify"
-                  }
-              ],
-          },
-          {
-              title: 'About',
-              items: [
-                  {
-                      label: 'contact us',
-                      to: 'mailto:prasanth@dothttp.dev',
-                  },
-              ],
-          }
+        {
+          title: 'Github',
+          items: [
+            {
+              label: 'dothttp-core',
+              to: 'https://github.com/cedric05/dothttp',
+            }, {
+              label: 'vscode-extension',
+              to: 'https://github.com/cedric05/dothttp-runner',
+            }, {
+              label: "echo curlify",
+              to: "https://github.com/cedric05/dothttp-curlify"
+            }
+          ],
+        },
+        {
+          title: 'About',
+          items: [
+            {
+              label: 'contact us',
+              to: 'mailto:prasanth@dothttp.dev',
+            },
+          ],
+        }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} dothttp`,
     },
