@@ -87,7 +87,7 @@ export default function Home() {
             width="250"
             height="54"
         /></a>
-          <br>
+          <br/>
           <img src="img/demo.gif" alt="demo" className={styles.aligncenter}/>
         </center>
       <main>
