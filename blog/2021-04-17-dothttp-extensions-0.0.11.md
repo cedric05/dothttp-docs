@@ -9,11 +9,11 @@ hide_table_of_contents: false
 
 # **Announcement** 
 
-users can try dothttp syntax on dothttp-playground without having to install. 
-checkout [playground](https://cedric05.github.io/dothttp-playground/)
+- users can try dothttp syntax on dothttp-playground without having to install. checkout [playground](https://cedric05.github.io/dothttp-playground/)
+- dothttp-runner now supports macos/darwin natively
 
-
-here are other bug fixes and features
+## More fixes/improvements:
 
 - [**Feature**] no need to escape quotes or double quotes when using """ """ for data payload
 - [**Feature**] variables can now  be multiline.
+- [**Feature**] extension now supports macos.
