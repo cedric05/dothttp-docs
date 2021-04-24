@@ -17,6 +17,9 @@ GET https://httpbin.org/{{var=get}}
 // curl -X GET 'https://httpbin.org/get?path=get'
 ```
 
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJzT1y9JLS7RyygpKeBydw1RADGKrfT1QXRSZp5eflG6fnV1WWKRbXpqSW0tl71CQWJJhoKtghJYtLZWiUtfXyG5tChHQTdCAWSCOjYjgJrtQRpBpqgDABPjJ6k=)
+
 `python -m dothttp test.http`
 
 In the above `httpdef`, var is set to `get`. one can overwrite it via
@@ -40,6 +43,9 @@ json({
   "full name": "{{name}} {{lastname}}",
 })
 ```
+
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJxVjc0KwjAQhO95iiUnBeneC30GBX2B1GxNSsyWZD1IyLtrFH96mhm+2VlEoSydE1nUYX88QXO5R2w6+thxuuDCWdScOW6KAtCTT1miuZLuQZfS3DCzi7XqXePB/ONPGizTt8FnI55ja7i7pWRGY58Icc0sBeffJ9MtBFg/rRV+86/pun0Aa2RE1A==)
 
 curl output will be
 
@@ -109,6 +115,9 @@ json({
 ```
 name --> shiva + "randomString of length 10 chars"
 height --> randomInteger of length 2
+
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVcWcX5eRrVXApAoJRWmpOjkJeYm6pkBeRl5WfkKVRXg/i2KkWJeSn5ucElRVaGBrW1SjoQDdjUImQzUjPTM0qA8tXVUP2eeSVWRrW1Oly1mgBMty+h)
 
 made request will like below
 ```shell

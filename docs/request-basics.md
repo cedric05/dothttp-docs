@@ -12,6 +12,9 @@ dothttp supports  `GET`, `POST`, `OPTIONS`, `DELETE`, `CONNECT`, `PUT`, `HEAD`, 
 ```http
 PUT https://httpbin.org/put
 ```
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwLCA1RyCgpKSi20tcH0UmZeXr5Ren6BaUlXACO2wnm)
+
 or in curl terms
 `curl -X PUT https://httpbin.org/put`
 
@@ -20,6 +23,8 @@ or in curl terms
 ```http
 DELETE https://httpbin.org/delete
 ```
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJxzcfVxDXFVyCgpKSi20tcH0UmZeXr5Ren6Kak5qSWpALvdC7A=)
 
 or in curl terms
 `curl -X DELETE https://httpbin.org/delete`
@@ -33,6 +38,9 @@ GET https://httpbin.org/delete
 ? key2 = value2
 ? key3 = "value2 with spaces"
 ? key4 = 'value2 with single quotes'
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJxzdw1RyCgpKSi20tcH0UmZeXr5Ren6Kak5qSWpXPYK2amVhgq2CmWJOaWpRhC+ERrfGMhXgggolGeWZCgUFyQmpxYrQWRNgLLqKLKZeek5qQqFpfklqcXqAJUcKes=)
+
 ```
 or in curl terms
 `curl -X GET 'https://httpbin.org/delete?key1=value2&key2=value2'`
@@ -44,6 +52,9 @@ GET https://httpbin.org/delete
 ? age= 40
 ? name = "john don"
 ```
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJxzdw1RyCgpKSi20tcH0UmZeXr5Ren6Kak5qSWpXPYKiemptgomBkBWXmJuqoKtglJWfkaeQkp+nhIAXBUTDw==)
+
 or in curl terms
 `curl -X GET 'https://httpbin.org/delete?age=40&name=john+don'`
 
@@ -57,6 +68,10 @@ POST https://httpbin.org/post
 ? key2 = value2
 data("this is text payload")
 ```
+
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVc9grZqZWGCrYKZYk5palGEL4Rgp+SWJKooVSSkVmsAEQlqRUlCgWJlTn5iSlKmgBR7h3R)
+
 curl request for better understanding
 `curl -X POST  -d 'this is text payload' 'https://httpbin.org/post?key1=value2&key2=value2'`
 
@@ -69,6 +84,7 @@ json({
 })
 ```
 
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVcWcX5eRrVXAogoJSXmJuqZKWglJWfkaeQkp+npAOVSExPVVKwUjAy4KrVBAAJqBcN)
 
 #### example 3: urlencode
 
@@ -81,6 +97,8 @@ urlencoded({
 // single quotes
 })
 ```
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVcpUU5qXnJ+SmpKRrVXAogoJSXmJuqZKWglJWfkaekAxVMTE9VUrBSMDKACeQkFpdAVaqn5Keq63Dp6ysUZ+al56QqFJbml6QWc9VqAgA+DSRd)
 
 in curl terms 
 ```shell
@@ -105,6 +123,9 @@ files(
     ('name3', '{"jsondata" : "jsonvalue"}', 'application/json')    
 )
 ```
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXL0ot1EvJLwFx9VJSy7jSMnNSizW4FIBAQz0vMTdVXUdBvSwxpzRVXVMHSdgIJF6SWlyil5uCKmMMkqlWyirOz0tJLElUUrBSAHPAhijVgmQTCwpyMpMTSzLz8/RBUuqaIO1cmgDVji0V)
+
 curl mirror of above request
 
 ```shell
