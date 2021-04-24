@@ -17,6 +17,8 @@ module.exports = {
       label: 'vscode extension',
       items: [
         'extension',
+        'extension-usage',
+        'extension-configuration'
       ],
     },
   ],
