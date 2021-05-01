@@ -25,7 +25,7 @@ module.exports = {
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          label: 'playground (beta)',
+          label: 'playground',
           to: "https://cedric05.github.io/dothttp-playground/", position: 'left'
         },
         {
@@ -52,7 +52,7 @@ module.exports = {
               to: 'docs/extension',
             },
             {
-              label: 'playground (beta)',
+              label: 'playground',
               to: "https://cedric05.github.io/dothttp-playground/"
             }
           ],
@@ -67,9 +67,14 @@ module.exports = {
             }, {
               label: 'vscode-extension',
               to: 'https://github.com/cedric05/dothttp-runner',
-            }, {
-              label: "echo curlify",
+            }, 
+            {
+              label: "http echo",
               to: "https://github.com/cedric05/dothttp-curlify"
+            },
+            {
+              label: "dothttp-playground",
+              to: "https://github.com/cedric05/dothttp-playground"
             }
           ],
         },
