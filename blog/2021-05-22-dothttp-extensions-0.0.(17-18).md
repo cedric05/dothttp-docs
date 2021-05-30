@@ -1,5 +1,5 @@
 ---
-title: dothttp-runner 0.0.17
+title: dothttp-runner 0.0.17/0.0.18
 author: prasanth
 author_url: https://github.com/cedric05
 tags: [dothttp-runner, vscode]
@@ -12,3 +12,11 @@ hide_table_of_contents: false
 - [**Bug**] integers are sent as float in json type fixed
 - [**Bug**] pure data payload with chineese not working fixed
 - [**Bug**] extension package file has included unwanted files(js libraries), which increased size from 2.5 MB to 4.5 MB fixed
+
+
+0.0.18 is released after two hours of 0.0.17 because of REGRESSSION issue
+## [0.0.18]
+- [**Bug**] **REGRESSSION** fixed dotextensions client not getting updated
+- [**Bug**]fixes issue with curl import (few)
+- [**Feature**] provides ability create and test via programming languages in javascript
+- [**improvement**] text/xml payload can be broken down, one can insert useful comments (comment/uncomment few parts)
