@@ -66,16 +66,38 @@ or in curl terms
 POST https://httpbin.org/post
 ? key1 = value2
 ? key2 = value2
-data("this is text payload")
+data(
+     "this is text"
+     // has a comment in between
+     " payload"
+)
 ```
 
 
-[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVc9grZqZWGCrYKZYk5palGEL4Rgp+SWJKooVSSkVmsAEQlqRUlCgWJlTn5iSlKmgBR7h3R)
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJxFi00KwjAUhPc5xZCVbnzYpSAeQcFe4NU+TLBNghl/enstFRw+GL6BOR3PLQJZ6k5k7i6mTb5fpeRKd8DNpi32eOrwsGbx5u+9UlcOczxDrPhCe9MvmwiCVigueRwtETGhM77M0u+EotOQtfdu/QGvkyls)
 
 curl request for better understanding
 `curl -X POST  -d 'this is text payload' 'https://httpbin.org/post?key1=value2&key2=value2'`
 
-#### example 2: json payload
+#### example 2: text payload
+
+In case of payload containing quotes its hard to add escapes. dothttp gives user flexibilty of triple quote strings (inspired from python).
+
+```http
+POST https://httpbin.org/post
+? key1 = value2
+? key2 = value2
+data(
+     """this "is" text"""
+     // has a comment in between
+     """ pay "ram" load"""
+)
+```
+
+[try in browser here](https://cedric05.github.io/dothttp-playground/#eJxFi0sKwkAQRPdziqJXurExS0E8goJeoGMaZzDzIdN+cnsdAlqb4lXxTsfzBd6s1B1z6z6kTZ5uXHI1d8Bd5y32eMr40G7h7s+DmKwcWojIfKigUAmmb/sOy8MMLxWCa45RkyEk9Gov1fRTUWQGTRIJY5ahuWvn3AfUxCyi)
+
+
+#### example 3: json payload
 ```http
 POST https://httpbin.org/post
 json({
@@ -86,7 +108,7 @@ json({
 
 [try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVcWcX5eRrVXAogoJSXmJuqZKWglJWfkaeQkp+npAOVSExPVVKwUjAy4KrVBAAJqBcN)
 
-#### example 3: urlencode
+#### example 4: urlencode
 
 ```http
 POST https://httpbin.org/post
@@ -144,3 +166,14 @@ https://req.dothttp.dev/
 POST https://req.dothttp.dev
 fileinput('C:\Users\john\documents\movie.mkv')
 ```
+## curl
+
+#### example 1: 
+basic curl 
+```http
+curl -X POST https://req.dothttp.dev
+--header "content-type: text/plain"
+data("hai")
+```
+
+[try in browser](https://cedric05.github.io/dothttp-playground/#eJwVx7EKgCAUBdDdr3g41WDu/kRBDa0PfaAganaL+vvobMdfPZPZaZnXjSLQTmdtl2MKFX+nILcyJgoH6aR9LZACg7eJI8gD2zKnolVg8KAjJz1+xJccfw==)
