@@ -177,3 +177,8 @@ data("hai")
 ```
 
 [try in browser](https://cedric05.github.io/dothttp-playground/#eJwVx7EKgCAUBdDdr3g41WDu/kRBDa0PfaAganaL+vvobMdfPZPZaZnXjSLQTmdtl2MKFX+nILcyJgoH6aR9LZACg7eJI8gD2zKnolVg8KAjJz1+xJccfw==)
+
+
+---
+Also checkout 
+[graphql example](https://ghpage.dothttp.dev/#eJx9j88KwjAMh+99itKLCrLe9xIKepe4RVdJm9o/wyG+u9WD2CHm0nxffqFEbDe7vVwMKfnYag3eNNFDh7eGwPX6HMAPV1pIcYnslnchS6lrxjCp9g1vodT9A1J2bD24SX67YpFr5hknPvjAPlM07Oajist/FWstFVpPPCFG9Td64ux67H+4UDmC7LrhEE3CWA0cWKxEzNZCmCpXltKP3REoQ5pfN+JgOqqiD/HdlRvWr2eEYOBYkqp1meghVuIJSlpmOA==)
