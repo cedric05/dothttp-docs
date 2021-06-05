@@ -17,6 +17,3 @@ hide_table_of_contents: false
 0.0.18 is released after two hours of 0.0.17 because of REGRESSSION issue
 ## [0.0.18]
 - [**Bug**] **REGRESSSION** fixed dotextensions client not getting updated
-- [**Bug**]fixes issue with curl import (few)
-- [**Feature**] provides ability create and test via programming languages in javascript
-- [**improvement**] text/xml payload can be broken down, one can insert useful comments (comment/uncomment few parts)
