@@ -10,6 +10,10 @@ module.exports = {
         'varibles',
         'comments',
         'multidef',
+        'certificates',
+        'extends',
+        'extra_args',
+        'test scripts'
       ],
     },
     {
