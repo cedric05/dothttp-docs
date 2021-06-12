@@ -22,7 +22,7 @@ with vscode extension installed one can try and checkout everything dothttp has 
     - [In File variable](varibles.md#variables)
     - [env file for section of variables](varibles.md#environment)
     - [individual variables](varibles.md#environment)
-- [Test scripts](test%20scripts.md)
+- [Test scripts](test_scripts.md)
 - [Extends](extends.md)
 - [Flags](extra_args.md)
 - dev friendly syntax (can be committed to git repo, revisions many more)

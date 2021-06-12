@@ -13,7 +13,7 @@ module.exports = {
         'certificates',
         'extends',
         'extra_args',
-        'test scripts'
+        'test_scripts'
       ],
     },
     {

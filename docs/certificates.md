@@ -1,6 +1,6 @@
 ---
-title: Comments
-slug: comments
+title: Certificates
+slug: certificates
 ---
 Dothttp by default uses cacerts. Starting [0.0.23](https://pypi.org/project/dothttp-req/0.0.23/) version, it supports client certificate ssl auth (X509Auth).
 

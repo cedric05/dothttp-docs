@@ -10,10 +10,10 @@ hide_table_of_contents: false
 Notebooks can be used natively by upgrading to latest vscode version[57]
 
 ## Features
-- [**Feature**](../docs/certificates) certificates pinning for sites
+- [**Feature**](docs/certificates) certificates pinning for sites
   - P12 (with password)
   - cert (with cert & optional key)
-- [**Feature**](../docs/extra_args#insecure) Allow insecure requests
-- [**Feature**](../docs/extra_args#clear) Cleanup Session after request completion
-- [**Improvement**](../docs/extends#extendable-from-base) Extend url from base (base_http url + target_def url)
-- [**Improvement**](../docs/extends#extendable-from-base) Extend certificate, insecure, clear from base
+- [**Feature**](docs/flags) Allow insecure requests
+- [**Feature**](docs/flags) Cleanup Session after request completion
+- [**Improvement**](docs/extend) Extend url from base (base_http url + target_def url)
+- [**Improvement**](docs/extend) Extend certificate, insecure, clear from base
