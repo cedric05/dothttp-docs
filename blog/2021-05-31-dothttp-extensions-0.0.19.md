@@ -12,5 +12,5 @@ No changes
 
 # 0.0.19
 - [**Bug**]fixes issue with curl import (few)
-- [**Feature**] provides ability create and test via programming languages in javascript
+- [**Feature**](../docs/test%20scripts.md) provides ability create and test via programming languages in javascript
 - [**improvement**] text/xml payload can be broken down, one can insert useful comments (comment/uncomment few parts)

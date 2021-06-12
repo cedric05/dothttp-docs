@@ -3,7 +3,7 @@ title: Comments
 slug: comments
 ---
 
-The dothttp comments are the statements that are not considered . The comments can be used to provide information or explanation. 
+The dothttp comments are the statements that are not considered (no op) for request generation. These can be used to provide information or explanation. 
 It can also be used to hide request data.
 
 Types of dothttp Comments
