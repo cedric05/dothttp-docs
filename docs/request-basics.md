@@ -7,6 +7,10 @@ slug: request-basics
 
 dothttp supports  `GET`, `POST`, `OPTIONS`, `DELETE`, `CONNECT`, `PUT`, `HEAD`, `TRACE`, `PATCH`, `COPY`, `LINK`, `UNLINK`, `PURGE`, `LOCK`, `UNLOCK`, `PROPFIND`, `VIEW`
 
+
+syntax is 
+`<METHOD> <URL>` for example `GET https://req.dothttp.dev` will make a `GET` request to `https://req.dothttp.dev`
+
 #### example  put request
 
 ```http
@@ -31,6 +35,20 @@ or in curl terms
 
 ## URL params
 
+Passing URL parameters is a way to exchange small and meaningful information between pages on a website. 
+for example
+`https://req.dothttp.dev?page=3&query=ram` 
+
+In here `page=3&query=ram` is the url params.
+
+Dothttp gives to fesibility to define params like
+
+```http
+https://req.dothttp.dev
+? page = 3
+? query = ram
+```
+with above syntax, one can always comment any param and make requests. (dev friendly)
 #### example 1
 ```http
 GET https://httpbin.org/delete
@@ -58,7 +76,44 @@ GET https://httpbin.org/delete
 or in curl terms
 `curl -X GET 'https://httpbin.org/delete?age=40&name=john+don'`
 
+## Headers
+
+HTTP header fields provide required information about the request or response, or about the object sent in the message body.
+
+Syntax: `key: value` 
+
+#### Example
+```http
+GET https://req.dothttp.dev
+content-type: application/json
+data("{
+
+}")
+
+```
+above request sets `content-type` to `application/json`.
+
 ## Payload
+
+
+It is last part of a request is the body/payload. Not all requests will have payload. useually post & put methods have payloads.
+payload/body consists of data which cannot be passed in url.
+
+With dothttp users can define payload in [text format](#text-payload), [json format](#json-payload), [urlencode](#urlencode), [multipart format](#multipart)
+
+
+### Text Payload:
+
+Syntax: 
+`data("this is payload")` In here `this is paylaod` is payload sent to request. it accepts mulitiline with having to escapes.
+Single quote or double quote is also supported. In case of escapping double quote, one could use triple quotes like
+
+
+`""" 'this is "example"'"""` --> has quotes
+
+#### Breaks:
+
+dothttp provides text breaks like `data("string" "join")` converts to `data("stringjoin")` using text breaks, dev can comment that specific key (dev friendly)
 
 
 #### example 1: text payload
@@ -96,6 +151,15 @@ data(
 
 [try in browser here](https://cedric05.github.io/dothttp-playground/#eJxFi0sKwkAQRPdziqJXurExS0E8goJeoGMaZzDzIdN+cnsdAlqb4lXxTsfzBd6s1B1z6z6kTZ5uXHI1d8Bd5y32eMr40G7h7s+DmKwcWojIfKigUAmmb/sOy8MMLxWCa45RkyEk9Gov1fRTUWQGTRIJY5ahuWvn3AfUxCyi)
 
+### Json payload
+
+Json(javascript object notation) payload is one of the most used request transfer format. 
+
+Syntax:
+
+`json({"key": "value"})` 
+
+Using json payload will set `content-type` to `application/json` by default (one can always override).
 
 #### example 3: json payload
 ```http
@@ -107,6 +171,14 @@ json({
 ```
 
 [try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVcWcX5eRrVXAogoJSXmJuqZKWglJWfkaeQkp+npAOVSExPVVKwUjAy4KrVBAAJqBcN)
+
+### UrlEncode
+
+by default most browsers use this method by default (if content-type is not specified). usage is same as [json payload](#json-payload)
+
+Syntax: `urlencoded({"key":"value"})`
+
+using urlencoded payload will set `content-type` to `application/x-www-form-urlencoded` (can be overriden)
 
 #### example 4: urlencode
 
@@ -132,7 +204,21 @@ https://httpbin.org/post
 ```
 
 
-## Multipart
+### Multipart
+
+This method of payload is used incase of multiple files needed to be uploaded in single request. 
+
+Syntax:
+```
+files(
+     ("name of file", "file path"),
+     ("name of file2", "filepath2"),
+     ("name", "in line value"),
+)
+```
+
+All file paths from above are verfied, if file path is present it will be sent, otherwise, inline value is sent in the request.
+according to file extension, content-type of that file can be set. (can be overriden like this `('name', 'filepath', 'application/json')`)
 
 
 #### example 1: with file
@@ -159,7 +245,14 @@ https://req.dothttp.dev/
 ```
 
 
-## Binary
+### Binary
+
+
+http files will only support unicode format. As embedding binary data in http file is not supported, http provides upload file(can be binary or non binary) with this.
+
+Syntax:
+`fileinput("path of file")`
+
 #### example 1: with file
 
 ```http
