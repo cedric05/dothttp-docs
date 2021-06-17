@@ -16,6 +16,7 @@ module.exports = {
         'extra_args',
         'test_scripts',
         'ordering',
+        'examples'
       ],
     },
     {
