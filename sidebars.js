@@ -7,13 +7,15 @@ module.exports = {
         'getting-started',
         'features',
         'request-basics',
+        'auth',
         'varibles',
         'comments',
         'multidef',
         'certificates',
         'extends',
         'extra_args',
-        'test_scripts'
+        'test_scripts',
+        'ordering',
       ],
     },
     {
