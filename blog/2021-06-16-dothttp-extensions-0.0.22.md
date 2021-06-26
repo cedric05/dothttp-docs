@@ -1,14 +1,11 @@
 ---
-title: dothttp-runner 0.0.22-0.0.23
+title: dothttp-runner 0.0.22
 author: prasanth
 author_url: https://github.com/cedric05
 tags: [dothttp-runner, vscode]
 description: extension release update.
 hide_table_of_contents: false
 ---
-
-## [0.0.23]
-Includes 0.0.22 with support vscode january 2021 version
 
 ## [0.0.22]
 - [**Feature**] Restart dothttp-cli command

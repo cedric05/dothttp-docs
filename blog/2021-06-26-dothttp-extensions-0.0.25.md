@@ -1,5 +1,5 @@
 ---
-title: dothttp-runner 0.0.24
+title: dothttp-runner 0.0.25
 author: prasanth
 author_url: https://github.com/cedric05
 tags: [dothttp-runner, vscode]
@@ -8,7 +8,7 @@ hide_table_of_contents: false
 ---
 
 
-## [0.0.24]
+## [0.0.25]
 - [**Feature**] Better distinction between json and javascript
 - [**Feature**] editor will show suggestions in `.dothttp.json`
 - Bump dothttp version to 0.0.26
