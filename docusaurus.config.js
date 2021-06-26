@@ -67,7 +67,7 @@ module.exports = {
             }, {
               label: 'vscode-extension',
               to: 'https://github.com/cedric05/dothttp-runner',
-            }, 
+            },
             {
               label: "http echo",
               to: "https://github.com/cedric05/dothttp-curlify"
@@ -101,6 +101,8 @@ module.exports = {
             'https://github.com/cedric05/dothttp-docs/edit/master/',
         },
         blog: {
+          blogSidebarCount: 100,
+          postsPerPage: 20,
           showReadingTime: true,
           editUrl:
             'https://github.com/cedric05/dothttp-docs/edit/master/',
