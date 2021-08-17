@@ -49,3 +49,28 @@ For certificate auth visit [this](./certificates.md)
 When users have multiple requests defined, extending auth information from base request is very helpful feature provided by dothttp.
 
 check out more information on this [here](./extends.md)
+
+
+
+
+## AWS Signature v4 Authentication
+
+Aws signature v4 authentication is used for interacting with amazonaws apis
+
+Syntax:
+
+`awsauth(<accessId>, <secretKey>, <service>, <region>)`
+
+```http
+@name('simple s3, list buckets')
+GET 'http://s3.amazonaws.com'
+awsauth('dummy-access-id' , 'dummy-secret-token' , 's3', 'us-east-1')
+# replace with correct values 
+```
+
+
+---
+
+When users has multiple requests, extending auth information from base request is very helpful feature provided by dothttp.
+
+check out more information on this [here](./extends.md)

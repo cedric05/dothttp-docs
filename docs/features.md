@@ -25,5 +25,7 @@ with vscode extension installed one can try and checkout everything dothttp has 
 - [Test scripts](test_scripts.md)
 - [Extends](extends.md)
 - [Flags](extra_args.md)
+- [Auth](auth.md)
+- [UnixSocket](UnixSocket.md)
 - dev friendly syntax (can be committed to git repo, revisions many more)
 - import requests from postman collections link
