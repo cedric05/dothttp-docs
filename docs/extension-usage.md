@@ -84,3 +84,10 @@ Each key in that json provides seperate environment (define multiple properties 
 Users can view list of past requests made. (seperated by day to day.)
 
 ![check here](/img/dothttp-history.jpg). 
+
+
+### Restart
+
+Dothttp-runner provides ability to restart `dotextensions-build` (internal dothttp-cli build). Can be used for if extension misbehaves (mostly used for dothttp development)
+
+![check here](/img/dothttp-restart.png). 

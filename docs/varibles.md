@@ -127,3 +127,62 @@ curl -X POST \
 -d '{"full name": "john Z4gi1r8IEX", "name": "john Z4gi1r8IEX", "height": 51}' \
 https://httpbin.org/post
 ```
+## uuid
+
+uuid is completely random string with 36 char length
+
+### Example
+
+```http
+POST "https://httpbin.org/post"
+json(
+  {
+    // creates slug with human readable random
+    "uuid": "{{$uuid}}"
+  }
+
+)
+```
+
+## randomSlug
+`randomSlug` or `randomLoremSlug`
+
+we’ll see random, human-readable slugs (e.g., brave-purple-penguin) in the web development world. These slugs offer the uniqueness of a number ID but can be more playful and fun.
+
+
+`{{$randomSlug:3}}` --> create slug with 3 (`brave-purple-penguin`)
+`{{$randomSlug:2}}` --> create slug with 3 (`brave-ranga`)
+
+
+### example
+
+```http
+POST "https://httpbin.org/post"
+json(
+  {
+    // creates slug with human readable random
+    "slug": "{{$randomSlug:10}}"
+  }
+
+)
+```
+
+## timestamp
+
+While testing, uniquely identifiying request is hard,  one can use timestamp (epoch) in headers or queryparams to distinguish from ther requests
+
+usage:
+
+`{{$timestamp}}` --> generates `1629338487`  (current timestamp)
+
+### Example:
+```http
+POST "https://httpbin.org/post"
+json(
+  {
+    // creates slug with human readable random
+    "timestamp": "{{$timestamp}}"
+  }
+
+)
+```
