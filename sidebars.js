@@ -16,7 +16,8 @@ module.exports = {
         'extra_args',
         'test_scripts',
         'ordering',
-        'examples'
+        'UnixSocket',
+        'examples',
       ],
     },
     {
@@ -25,7 +26,9 @@ module.exports = {
       items: [
         'extension',
         'extension-usage',
-        'extension-configuration'
+        'extension-configuration',
+        'export',
+        'extension-dothttp-notebook',
       ],
     },
   ],
