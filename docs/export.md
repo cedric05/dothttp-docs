@@ -14,7 +14,7 @@ please visit [installation-page](./getting-started.md) or go directly to marketp
 
 
 ## Postman Collections
-
+![check here](/img/OpenAsHttpBook.png)
 Postman is most used http client out there. importing or exporing a postman collection is supported in dothttp
 
 ### Import postman collection
@@ -25,6 +25,8 @@ do `ctrl+shift+p` and write `dothttp: import resource`
 #### Step 1: 
 pick postman from list of options
 ![check here](/img/postmanimport.png)
+
+or check [alternative](#alternative)
 
 #### Step 2: 
 select how you want to import. 
@@ -37,6 +39,10 @@ postman provides export via json file or via link generated from postman
 
 paste link, it will ask which directory to save
 ![check here](/img/postman-import-by-link.png)
+
+or
+
+or check [alternative](#alternative)
 
 
 #### Import step by file
@@ -87,6 +93,8 @@ To export to `ctrl+shift+p` and select `>dothttp generate request programming la
 
 ![check here](/img/export-general-programming.png)
 
+or check [alternative](#alternative)
+
 ### step-2 export
 
 Pick language of your choice.
@@ -98,3 +106,8 @@ Language sub options, pick if exists
 ![check here](/img/export-pick-sublanguage-if-exisits.png)
 
 request will be generated and opened in new tab of vscode
+----
+### Alternative
+
+Open httpfile, right click on mouse, it will show editor submenu
+![check here](/img/OpenAsHttpBook.png)

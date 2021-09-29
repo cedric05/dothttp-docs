@@ -20,3 +20,30 @@ options in response
 ![check here](/img/dothttp-notebook-request-sent.png)
 4. response filter 
 ![check here](/img/dothttp-notebook-response-filter.png)
+
+
+
+## Import http file as Dothttp
+
+
+Import http file as notebook with ease. 
+
+Steps: 
+1. open httpfile 
+2. open submenu (right click on editor file)
+3. select `Dothttp: Open as HttpBook`
+
+![check here](/img/OpenAsHttpBook.png)
+
+
+## Convert HttpBook to httpfile
+
+Import http file as notebook with ease. 
+
+Steps: 
+1. open httpbook
+2. Go to Right top editor title 
+3. click `Dothttp: Notebook to Httpfile`
+
+![check here](/img/OpenAsHttpFile.png)
+

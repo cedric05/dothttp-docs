@@ -31,6 +31,9 @@ set `dothttp.conf.runrecent` to `false` to run always choose request from editor
 set `dothttp.conf.showheaders` to `true` to view response headers
 
 
+### Use Unstable
+set `dothttp.conf.useunstable` to `true` to view use unstable builds for dothttp (mostly usefull for developer)
+
 ## Installation
 
 ### Dothttp pip package (advanced)
