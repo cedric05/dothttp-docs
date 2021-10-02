@@ -4,6 +4,9 @@ title: Extension Notebook
 slug: dothttp-runner-notebook
 ---
 
+<iframe width="720" height="480" src="https://www.youtube.com/embed/pSgwQUJS1l4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 Dothttp-runner provides notebook functionality recently introduced by vscode team. For using notebooks create a file with `httpbook` extension.
 
 
