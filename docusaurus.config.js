@@ -75,6 +75,10 @@ module.exports = {
             {
               label: "dothttp-playground",
               to: "https://github.com/cedric05/dothttp-playground"
+            },
+            {
+              label: "privacy policy",
+              to: "https://cedric05.github.io/dothttp-privacy-policy/"
             }
           ],
         },
