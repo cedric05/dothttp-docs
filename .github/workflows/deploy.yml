@@ -12,6 +12,7 @@ jobs:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+          subscription-id: ${{ secrets.AZ_SUBSCRIPTION_ID }}
       - name: Setup node
         uses: actions/setup-node@v1
         with:
@@ -26,13 +27,13 @@ jobs:
           azcliversion: 2.0.72
           inlineScript: |
             cd build
-            az storage blob upload-batch  --subscription ${{ secrets.AZ_SUBSCRIPTION_ID }} --account-name dothttpdocs -d '$web' -s .
+            az storage blob upload-batch --account-name dothttpdocs -d '$web' -s .
       - name: Purge CDN endpoint
         uses: azure/CLI@v1
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az cdn endpoint purge --subscription ${{ secrets.AZ_SUBSCRIPTION_ID }} --content-paths  "/*" --profile-name "dothttp-docs" --name "dothttp-docs" --resource-group "dothttpdocs"
+            az cdn endpoint purge --content-paths  "/*" --profile-name "dothttp-docs" --name "dothttp-docs" --resource-group "dothttpdocs"
       - name: logout
         run: |
           az logout
