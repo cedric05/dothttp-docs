@@ -137,7 +137,7 @@ uuid is completely random string with 36 char length
 POST "https://httpbin.org/post"
 json(
   {
-    // creates slug with human readable random
+    // generates random uuid
     "uuid": "{{$uuid}}"
   }
 
@@ -180,7 +180,7 @@ usage:
 POST "https://httpbin.org/post"
 json(
   {
-    // creates slug with human readable random
+    // creates current timestamp
     "timestamp": "{{$timestamp}}"
   }
 
