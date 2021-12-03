@@ -1,39 +1,33 @@
-name: Deploy endeavour.today
+name: Deploy Dothttp docs
 # az ad sp create-for-rbac --name "dothttpdocs" --role contributor --scopes /subscriptions/{subscriptionid}/resourceGroups/dothttpdocs  --sdk-auth
 on:
   push:
-    branches: [ release ]
+    branches: [ master ]
 
 jobs:
-  build:
+  gh-release:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-          subscription-id: ${{ secrets.AZ_SUBSCRIPTION_ID }}
-      - name: Setup node
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Setup Environment
-        run: |
-          npm install
-          npm run build
-      - name: Upload to blob storage
-        uses: azure/CLI@v1
+      - uses: webfactory/ssh-agent@v0.5.0
         with:
-          azcliversion: 2.0.72
-          inlineScript: |
-            cd build
-            az storage blob upload-batch --account-name dothttpdocs -d '$web' -s .
-      - name: Purge CDN endpoint
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.0.72
-          inlineScript: |
-            az cdn endpoint purge --content-paths  "/*" --profile-name "dothttp-docs" --name "dothttp-docs" --resource-group "dothttpdocs"
-      - name: logout
+          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      - name: Release to GitHub Pages
+        env:
+          USE_SSH: true
+          GIT_USER: git
         run: |
-          az logout
+          git config --global user.email "actions@github.com"
+          git config --global user.name "gh-actions"
+          if [ -e yarn.lock ]; then
+            yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+            npm ci
+          else
+            npm i
+          fi
+          npm run deploy
