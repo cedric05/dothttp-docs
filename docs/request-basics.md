@@ -142,10 +142,14 @@ In case of payload containing quotes its hard to add escapes. dothttp gives user
 POST https://httpbin.org/post
 ? key1 = value2
 ? key2 = value2
-data(
+text(
      """this "is" text"""
      // has a comment in between
      """ pay "ram" load"""
+
+; // break
+ 'text/plain' // content-type
+
 )
 ```
 
@@ -210,10 +214,10 @@ This method of payload is used incase of multiple files needed to be uploaded in
 
 Syntax:
 ```
-files(
-     ("name of file", "file path"),
-     ("name of file2", "filepath2"),
-     ("name", "in line value"),
+multipart(
+     "name of file"< "file path",
+     "name of file2"< "filepath2",
+     "name"< "in line value",
 )
 ```
 
@@ -225,10 +229,10 @@ according to file extension, content-type of that file can be set. (can be overr
 
 ```http
 POST https://req.dothttp.dev
-files(
-    ('name', 'value'),
-    ('name2', 'test.md'),
-    ('name3', '{"jsondata" : "jsonvalue"}', 'application/json')    
+multipart(
+    'name'< 'value',
+    'name2'< 'test.md',
+    'name3'< '{"jsondata" : "jsonvalue"}' ; 'application/json'    
 )
 ```
 
@@ -258,6 +262,8 @@ Syntax:
 ```http
 POST https://req.dothttp.dev
 fileinput('C:\Users\john\documents\movie.mkv')
+// or
+// < 'C:\Users\john\documents\movie.mkv'
 ```
 ## curl
 
