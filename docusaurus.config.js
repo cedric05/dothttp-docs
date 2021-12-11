@@ -10,6 +10,9 @@ module.exports = {
   organizationName: 'cedric05',
   projectName: 'dothttp-docs',
   themeConfig: {
+    prism: {
+      additionalLanguages: ['http'],
+    },
     navbar: {
       title: 'dothttp',
       logo: {
