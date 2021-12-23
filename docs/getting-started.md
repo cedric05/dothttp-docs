@@ -38,4 +38,6 @@ run it via
 
 ## extension installation
 
+we ask you to use http notebooks instead of httpfiles. it comes with storing responses, shows generated properies. 
+
 <iframe width="720" height="480" src="https://www.youtube.com/embed/I1PtzV5Oa5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

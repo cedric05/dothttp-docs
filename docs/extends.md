@@ -47,3 +47,44 @@ header1: headervalue1
 GET "/basic-auth/username/password"
 header2: headervalue2
 ```
+
+
+#### JWT
+
+```http
+# creates a base
+# which gathers token for each request sets it as variable
+# also, sets authorization header 
+@name("base")
+GET "http://localhost:3000/api"
+"Authorization" : "{{auth=}}"
+
+> {%
+
+client.global.set("auth", response.headers.valueOf("Authorization"));
+
+client.test("is 200", function(){
+    client.assert(response.status ===200, "status is 200")
+})
+
+%}
+
+/*
+    using script inherit. log `login` unwraps authorazation header from token/header
+    and checks if response code is 200
+*/
+@name("Login") : "base"
+POST "/login"
+json({
+	"email": "rr@admin.com",
+	"password": "pass1",
+})
+
+/*
+    using script inherit. log `self` sets authorization header from earlier api. will check and update authorization header according to the latest.
+    runs tests also
+*/
+@name("self") : "base"
+GET "/self"
+
+```
