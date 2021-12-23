@@ -11,6 +11,7 @@ The dothttp extends is used in case of user wants to inherit request auth/header
 - Url join (contatinates base_url and target http url)
 - Insecure (`@insecure`)
 - Clear (`@clear`)
+- Script (user always want to run default tests)
 
 ### No hierarchy
 We wanted dothttp to be simple and extendable. lets say, grandparent, parent, child with below relationships
