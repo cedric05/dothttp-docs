@@ -78,15 +78,6 @@ export default function Home() {
         </div>
       </header>
       <center>
-        <a
-            href="https://www.producthunt.com/posts/dothttp?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dothttp"
-            target="_blank"
-        ><img
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=290464&theme=light"
-            alt="Dothttp - simple concise syntax for making http requests | Product Hunt"
-            width="250"
-            height="54"
-        /></a>
           <br/>
           <img src="img/demo.gif" alt="demo" className={styles.aligncenter}/>
         </center>
