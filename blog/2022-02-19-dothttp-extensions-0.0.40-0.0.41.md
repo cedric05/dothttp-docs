@@ -13,7 +13,7 @@ hide_table_of_contents: false
 - [**Bump**] dothttp
     - cookies are not visible in request tab or in history
     - curl for request is not including cookies
-
+    - ntlm authentication
 
 # 0.0.40
 - [**Improvement**] Use Vscode inbuilt search in notebook

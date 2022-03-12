@@ -6,6 +6,12 @@ slug: auth
 
 Dothttp supports basic, digest and certificate auth inherently
 
+For certificate  auth docs visit [this](./certificates.md)
+
+Redefining authentication for each request is burden, with dothttp one can extend auth information from base request. check out more information on this [here](./extends.md)
+
+
+
 ## Basic Authentication
 
 Basic authentication is nothing but setting header
@@ -44,15 +50,6 @@ digestauth("username", "password")
 ```
 
 
-For certificate auth visit [this](./certificates.md)
-
-When users have multiple requests defined, extending auth information from base request is very helpful feature provided by dothttp.
-
-check out more information on this [here](./extends.md)
-
-
-
-
 ## AWS Signature v4 Authentication
 
 Aws signature v4 authentication is used for interacting with amazonaws apis
@@ -69,8 +66,17 @@ awsauth('dummy-access-id' , 'dummy-secret-token' , 's3', 'us-east-1')
 ```
 
 
----
+## NTLM Authentication
 
-When users has multiple requests, extending auth information from base request is very helpful feature provided by dothttp.
+Windows NT LAN Manager (NTLM) is a challenge-response authentication protocol used to authenticate a client to a resource on an Active Directory domain.
 
-check out more information on this [here](./extends.md)
+Syntax:
+
+`ntlmauth(<username>, <password>)`
+
+```http
+@name('ntlm auth')
+GET http://localhost:5000/both
+ntlmauth('username','password')
+# replace with correct values 
+```
