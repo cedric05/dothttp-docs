@@ -7,18 +7,24 @@ slug: dothttp-runner-configuration
 
 ## Request-Response
 
-### Reuse old
+
+### For Http files
+
+
+For http file there is no way to save response. below configurations specially made for pre notebook era. Start using notebooks easy configuration or no configuration.
+
+#### Reuse old
 
 set `dothttp.conf.run.reuseold` to `false`, when opening in new tab is required for each httpdef execution
 
 
-### Response Save
+#### Response Save
 
 extension doesn't save any response from any requests but creates an untitled/unsaved editor for you to check and review. if saving is required, user can save right away.
 
 `dothttp.conf.response.savedirectory` provides flexibility to choose directory.
 
-### Run Recent
+#### Run Recent
 
 while making requests with payload spans more than current editor, scrolling up to `run` itchy. 
 
@@ -26,12 +32,12 @@ set `dothttp.conf.runrecent` to `true` to run most recent request from editor pa
 set `dothttp.conf.runrecent` to `false` to run always choose request from editor panel.
 
 
-### Show headers
+#### Show headers
 
 set `dothttp.conf.showheaders` to `true` to view response headers
 
 
-### Use Unstable
+#### Use Unstable
 set `dothttp.conf.useunstable` to `true` to view use unstable builds for dothttp (mostly usefull for developer)
 
 ## Installation

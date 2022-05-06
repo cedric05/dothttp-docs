@@ -54,12 +54,17 @@ select postman collection json file
 
 ### Export postman collection
 
+#### Postman account
+
+Dothttp can export http files/ notebooks into postman account. If user wants to export to postman account, he will promted for postman api token. for more information generating postman-token [visit](https://learning.postman.com/docs/developer/intro-api/))
+
+#### Postman collection
+
 For exporting to postman collection, open `http` file in vscode. click menu options in editor.
 
 ![check here](/img/postman-export.png)
 
 select `dothttp export http to postman`  and select folder to save file.
-
 
 
 ## Openapi/Swagger
@@ -80,6 +85,11 @@ Follow same steps as [postman-import](#step-1), choose `curl` over postman and p
 
 Support is availabile for both `2.0` and `3.0`
 
+## Har
+
+### Import
+
+Har is easiest way to export requests from chrome. dothttp has support for it. Follow same steps as [postman collection](#postman-collections), instead of postman, pick har.
 
 ## Export http request to general purpose programming languages
 
@@ -94,6 +104,7 @@ To export to `ctrl+shift+p` and select `>dothttp generate request programming la
 ![check here](/img/export-general-programming.png)
 
 or check [alternative](#alternative)
+
 
 ### step-2 export
 
