@@ -3,8 +3,12 @@ title: Test Scripts
 slug: scripts
 ---
 
-Dothttp provides flexibility of small tests in javascript in same file. tests are faily simple
+Dothttp provides flexibility of small tests in javascript/python in same file. writing tests are faily simple.
 
+- [python](#python)
+- [javascript](#javascript)
+
+## Javascript
 
 
 ### Method
@@ -75,3 +79,134 @@ client.global.set("outputval", response.body);
 ```
 
 For more examples visit https://www.jetbrains.com/help/idea/http-response-handling-examples.html
+
+
+## Python
+
+
+### Execution
+
+Execution follows of request follows this order.
+
+7. **Pre request script**
+1. Property resolution (default properties in script)
+2. Dynamic Property resoluiton (`$randomStr`...)
+4. Headers resolution
+3. Auth resolution
+5. Body resolution
+6. certificate (if exists)
+8. request completion
+9. **test script**
+
+### Availaible libraries
+
+Having pre request scripts are completely sandboxed so not to harm. here are list of method libraires availabile.
+
+1. math
+2. hashlib
+3. [faker](https://pypi.org/project/Faker/)
+4. unittest
+5. csv
+6. uuid
+7. base64
+8. `client` (dothttp client)
+   1. `request` (dothttp current executing request)
+      1. `headers`
+      2. `query`
+      3. `payload`
+   2. `response` (availaible for test scripts)
+   3. `properties`(python `dictionary`)
+
+
+
+### Pre-request script
+
+Pre request script runs before executing each request. Currently support is availabile only for python script. It opens up more possibilites. 
+
+
+Some of its uses
+- Custom authentication
+- Faking request data
+- Some computation
+
+
+#### Writing
+
+Pre request scripts are nothing but methods prefixed with `pre` defined in script section of dothttp request. 
+
+```python
+def pre_request1():
+    # sets new header
+    client.request.headers.setdefault("hai", "bye")
+
+def pre_request2():
+    # sets overwrites header
+    client.request.headers.setdefault("hai", str(2*1000*2999))
+```
+
+
+### Test script
+
+Test scripts are unit test cases which will be executed. There are two types of writing test scripts
+
+1. methods prefixed with `test`. it should not accept any arguments
+2. classes extending `unittest.TestCase`.
+
+
+#### Writing/example
+
+```python
+def pre_hai():
+    # simple pre request script
+    client.request.headers.setdefault("preheader", "prevalue")
+
+# simple test method
+def test_hai():
+    # if exceptions are throwed, test is failed
+    if client.response.status_code == 200:
+        log('working')
+    else:
+        log('not working')
+
+# Class level tests
+class SampleTest(unittest.TestCase):
+    def test_is_mime_not_json(self):
+        # simpel assertion
+        self.assertTrue(client.response.headers.get("content-type").startswith("application/xml"), "should not be json")
+
+    def test_pre_request_preheader(self):
+        body = client.response.json()
+        # simple assertion
+        self.assertEqual("assertion", body['headers']['someheaderkey'])
+
+```
+
+### Complete Example
+```http
+@name("text payload")
+GET http://httpbin.org/get
+> {%
+
+def pre_hai():
+    client.request.headers.setdefault("preheader", "prevalue")
+
+def test_hai():
+    if client.response.status_code == 200:
+        log('working')
+    else:
+        log('not working')
+
+class SampleTest(unittest.TestCase):
+    def test_is_mime_not_json(self):
+        self.assertTrue(client.response.headers.get("content-type").startswith("application/xml"), "should not be json")
+
+    def test_pre_request_preheader(self):
+        body = client.response.json()
+        self.assertEqual("prevalue", body['headers']['Preheader'])
+%} python
+```
+### Limitations
+1. failing pre request fails execution of request
+2. pre request script should not accept any arguments
+3. `import` and `filesystem` access is completely blocked and fails pre request.
+4. All assignment on `client` and `libraries` are blocked and fails pre request.
