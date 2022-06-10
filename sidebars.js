@@ -29,6 +29,7 @@ module.exports = {
         'extension-configuration',
         'export',
         'extension-dothttp-notebook',
+        'extension-web',
       ],
     },
   ],
