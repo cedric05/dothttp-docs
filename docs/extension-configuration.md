@@ -57,3 +57,20 @@ User will need to manually install dothttp via `python -m pip install dothttp-re
 **Used for development of extension**
 
 set `dothttp.conf.path` to dotextensions cli path. for more information of this [visit](https://github.com/cedric05/dotextensions-build)
+
+
+### Dothttp Agent
+
+**Used in case of webextension**
+
+Dothttp extension supports running requests in webextension with help agent. browser should be able to talk to agent. to run agent visit [here](./extension-web.md)
+
+config: `dothttp.conf.agent` defaults to `http://localhost:5000/`. change this configuration only if agent is running on different port or host.
+
+### Dothttp Open in Notebook 
+
+
+althouth there is support notebook files, some devs want to use old `http` files for executing requests. extension suggests moving to notebook, which can be annoying. turnof those notifications via setting it to `true` 
+
+
+config: `dothttp.conf.hideopennotebookfromfile` defaults to `false`
