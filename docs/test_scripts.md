@@ -5,8 +5,8 @@ slug: scripts
 
 Dothttp provides flexibility of small tests in javascript/python in same file. writing tests are faily simple.
 
-- [python](#python)
 - [javascript](#javascript)
+- [python](#python) (*preferred*)
 
 ## Javascript
 
@@ -114,8 +114,16 @@ Having pre request scripts are completely sandboxed so not to harm. here are lis
       1. `headers`
       2. `query`
       3. `payload`
+        1. `data` (attribute/text exists if postdata is text)
+        2. `json` (attribute/(json/dict) exists if postdata is json )
+        2. `header` (attribute/text exists if posted data content-type is defined)
+        3. `filename` (attribute/text exists if postdata is to be read from file)
+        4. `files` (attribute/list exists if postdata is multipart)
    2. `response` (availaible for test scripts)
    3. `properties`(python `dictionary`)
+        1. `set` (to update a property)
+        2. `clear` (to delete a property)
+        3. `clear_all` (to clear all properties)
 
 
 
@@ -159,6 +167,8 @@ Test scripts are unit test cases which will be executed. There are two types of 
 def pre_hai():
     # simple pre request script
     client.request.headers.setdefault("preheader", "prevalue")
+    # updates properties
+    client.properties.set('somekey', 'somevalue')
 
 # simple test method
 def test_hai():
@@ -167,6 +177,7 @@ def test_hai():
         log('working')
     else:
         log('not working')
+    client.properties.set('somekey', 'somevalue2')
 
 # Class level tests
 class SampleTest(unittest.TestCase):
