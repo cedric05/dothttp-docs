@@ -4,20 +4,27 @@
         <title>dothttp Blog</title>
         <link>https://docs.dothttp.dev/blog</link>
         <description>dothttp Blog</description>
-        <lastBuildDate>Wed, 22 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 03 Jul 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[dothttp-runner 0.0.45]]></title>
+            <title><![CDATA[dothttp-runner 0.0.53]]></title>
+            <link>https://docs.dothttp.dev/blog/2022/07/03/dothttp-extensions-0.0.52-0.0.53</link>
+            <guid>dothttp-runner 0.0.53</guid>
+            <pubDate>Sun, 03 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[extension release update.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[dothttp-runner 0.0.51]]></title>
             <link>https://docs.dothttp.dev/blog/2022/06/22/dothttp-extensions-0.0.50-0.0.51</link>
-            <guid>dothttp-runner 0.0.45</guid>
+            <guid>dothttp-runner 0.0.51</guid>
             <pubDate>Wed, 22 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[extension release update.]]></description>
         </item>
         <item>
-            <title><![CDATA[dothttp-runner 0.0.45]]></title>
+            <title><![CDATA[dothttp-runner 0.0.49]]></title>
             <link>https://docs.dothttp.dev/blog/2022/06/10/dothttp-extensions-0.0.49</link>
-            <guid>dothttp-runner 0.0.45</guid>
+            <guid>dothttp-runner 0.0.49</guid>
             <pubDate>Fri, 10 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[extension release update.]]></description>
         </item>
