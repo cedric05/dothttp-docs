@@ -9,6 +9,7 @@ slug: dothttp-runner-notebook
 
 Dothttp-runner provides notebook functionality recently introduced by vscode team. For using notebooks create a file with `httpbook` extension.
 
+By default as for performance reasons, notebook output just is highlighted according to language. for more support you would want to install [dotbook](https://marketplace.visualstudio.com/items?itemName=ShivaPrasanth.dotbook) and change presentation by clicking three dots near left top of notebook output.
 
 By using notebook, one can see response in same place as request. gives you option to save response for future purpose. 
 

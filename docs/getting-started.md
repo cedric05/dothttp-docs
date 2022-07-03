@@ -40,4 +40,10 @@ run it via
 
 we ask you to use http notebooks instead of httpfiles. it comes with storing responses, shows generated properies. 
 
+Extension url: [dothttp](https://marketplace.visualstudio.com/items?itemName=ShivaPrasanth.dothttp-code) 
+
+Extension Notebook Ace output support: [dotbook](https://marketplace.visualstudio.com/items?itemName=ShivaPrasanth.dotbook)
+
+To install, open extensions page, search for dothttp and dotbook install both.
+
 <iframe width="720" height="480" src="https://www.youtube.com/embed/I1PtzV5Oa5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
