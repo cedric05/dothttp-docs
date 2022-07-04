@@ -9,6 +9,10 @@ hide_table_of_contents: false
 
 ## [0.0.52/0.0.53]
 - [ **Bug**] Generate/OpeninEditor is not working in notebook output (bug introduced in webextension support (0.0.49)) 
+- [ **chore** ] Update dothttp cli to `0.0.41a5`
+    - [**chore** ] updates textx to 3.0.0
+    - [**chore** ] updates requests to 2.28.1
+    - [**improvement** ] python test script has support using `for` loop
 
 ## [0.0.52]
 **Prerelease**
