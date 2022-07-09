@@ -4,9 +4,16 @@
         <title>dothttp Blog</title>
         <link>https://docs.dothttp.dev/blog</link>
         <description>dothttp Blog</description>
-        <lastBuildDate>Sun, 03 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Jul 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[dothttp-runner 0.0.53]]></title>
+            <link>https://docs.dothttp.dev/blog/2022/07/09/dothttp-extensions-0.0.54</link>
+            <guid>dothttp-runner 0.0.53</guid>
+            <pubDate>Sat, 09 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[extension release update.]]></description>
+        </item>
         <item>
             <title><![CDATA[dothttp-runner 0.0.53]]></title>
             <link>https://docs.dothttp.dev/blog/2022/07/03/dothttp-extensions-0.0.52-0.0.53</link>
