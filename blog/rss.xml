@@ -8,9 +8,9 @@
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[dothttp-runner 0.0.53]]></title>
+            <title><![CDATA[dothttp-runner 0.0.54]]></title>
             <link>https://docs.dothttp.dev/blog/2022/07/09/dothttp-extensions-0.0.54</link>
-            <guid>dothttp-runner 0.0.53</guid>
+            <guid>dothttp-runner 0.0.54</guid>
             <pubDate>Sat, 09 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[extension release update.]]></description>
         </item>

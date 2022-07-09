@@ -8,8 +8,8 @@
     <subtitle>dothttp Blog</subtitle>
     <icon>https://docs.dothttp.dev/img/rocket.svg</icon>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 0.0.53]]></title>
-        <id>dothttp-runner 0.0.53</id>
+        <title type="html"><![CDATA[dothttp-runner 0.0.54]]></title>
+        <id>dothttp-runner 0.0.54</id>
         <link href="https://docs.dothttp.dev/blog/2022/07/09/dothttp-extensions-0.0.54"/>
         <updated>2022-07-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[extension release update.]]></summary>
