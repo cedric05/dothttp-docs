@@ -9,7 +9,7 @@ hide_table_of_contents: false
 
 
 
-## [0.0.58] (Unreleased)
+## [0.0.58]
 - [ **BUG**] fix Property view is not showing for `.http/.dhttp` files
 - [ **Feature**] Support hiding property value by default
   - toggle/untoggle for to view/hide
