@@ -80,3 +80,27 @@ GET http://localhost:5000/both
 ntlmauth('username','password')
 # replace with correct values 
 ```
+
+
+## Hawk Authentication
+
+It is an authentication scheme for HTTP, built around HMAC digests of requests and responses.
+
+Every authenticated client request has an Authorization header containing a MAC (Message Authentication Code) and some additional metadata, then each server response to authenticated requests contains a Server-Authorization header thatauthenticates the response, so the client is sure it comes from the right server.
+
+
+
+Syntax:
+
+`hawkauth(<id>, <key>)`
+
+(or)
+
+`hawkauth(<id>, <key>, <algorithm like sha256...>)`
+
+```http
+@name('hawk auth')
+GET https://postman-echo.com/auth/hawk
+hawkauth('dh37fgj492je','werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn')
+json({})
+```

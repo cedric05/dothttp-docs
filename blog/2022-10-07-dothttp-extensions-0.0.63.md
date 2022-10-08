@@ -10,3 +10,5 @@ hide_table_of_contents: false
 
 ## [0.0.63]
 - [ **Improvement**] History now includes filename for each cell block.
+- [ **Bump**] bump dotextensions-build to 0.0.42a1
+    - [**Improvement** ] Adds support for hawkauth
