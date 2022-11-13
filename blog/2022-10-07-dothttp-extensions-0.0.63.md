@@ -10,7 +10,7 @@ hide_table_of_contents: false
 
 ## [0.0.63]
 - [ **Improvement**] History now includes filename for each cell block.
-- [ **Bump**] bump dotextensions-build to `0.0.42a2`
+- [ **Bump**] bump dotextensions-build to `0.0.42a3`
     - [**Improvement** ] Adds support for hawkauth
     - [**Chore** ] builds with `python3.11` and its improvements
     - [**Chore** ] openssl update from `1.1.1p` to `1.1.1q`
