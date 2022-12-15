@@ -30,6 +30,7 @@ module.exports = {
         'export',
         'extension-dothttp-notebook',
         'extension-web',
+        'request-history',
       ],
     },
   ],
