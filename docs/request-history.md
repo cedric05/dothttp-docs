@@ -1,6 +1,6 @@
 ---
 title: Request Redirect History
-slug: request-redirect-history
+slug: request-history
 ---
 
 
