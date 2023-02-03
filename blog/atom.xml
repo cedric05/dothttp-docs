@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.dothttp.dev/blog</id>
     <title>dothttp Blog</title>
-    <updated>2022-12-15T00:00:00.000Z</updated>
+    <updated>2023-02-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.dothttp.dev/blog"/>
     <subtitle>dothttp Blog</subtitle>
     <icon>https://docs.dothttp.dev/img/rocket.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.1 - 1.0.2]]></title>
+        <id>dothttp-runner 1.0.1 - 1.0.2</id>
+        <link href="https://docs.dothttp.dev/blog/2023/02/02/dothttp-extensions-1.0.1-1.0.2"/>
+        <updated>2023-02-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[extension release update.]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[dothttp-runner 1.0.0]]></title>
         <id>dothttp-runner 1.0.0</id>
