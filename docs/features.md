@@ -1,7 +1,7 @@
 ---
 title: Features of Dothttp
-
 slug: dothttp-features
+---
 
 To get started with Dothttp, please visit the [Dothttp Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=ShivaPrasanth.dothttp-code&ssr=false#qna) for installation. With this extension installed, you can explore and experience all the remarkable features that Dothttp has to offer.
 
@@ -23,10 +23,10 @@ To get started with Dothttp, please visit the [Dothttp Visual Studio Code Extens
 - [Commenting in Dothttp](comments.md)
 
 ### Variable Support
-- [Working with Variables](variables.md)
-    - [In-File Variables](variables.md#variables)
-    - [Environment Variables from an Env File](variables.md#environment)
-    - [Individual Variables](variables.md#individual)
+- [Working with Variables](varibles.md)
+    - [In-File Variables](varibles.md#variables)
+    - [Environment Variables from an Env File](varibles.md#environment)
+    - [Individual Variables](varibles.md#individual)
 
 ### Writing Test Scripts
 - [Testing with Dothttp](test_scripts.md)
