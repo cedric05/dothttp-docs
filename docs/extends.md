@@ -1,60 +1,49 @@
 ---
-title: Extends
-slug: extend
+title: Extending Requests in dothttp
+slug: request-extension
 ---
 
-The dothttp extends is used in case of user wants to inherit request auth/headers from parent request. like oops, extendee can use base auth/headers(only auth and headers) and also override (if needed)
+The "extend" feature in dothttp allows users to inherit request authentication and headers from a parent request. This feature is especially useful for creating a hierarchy of requests where one request can use the authentication and headers defined in another ("parent") request, and potentially override them if necessary.
 
-### Extendable From Base
-- Auth defined in One request, and used everywhere else
-- Headers defined in One request and used everywhere else
-- Url join (contatinates base_url and target http url)
-- Insecure (`@insecure`)
-- Clear (`@clear`)
-- Script (user always want to run default tests)
+### Extending from a Base Request
+The "extend" feature enables the following capabilities:
 
-### No hierarchy
-We wanted dothttp to be simple and extendable. lets say, grandparent, parent, child with below relationships
-```text
-grandparent -> parent
-parent -> child
-```
-child will not use grandparent's any features, it will use parent (better not go for this kind of hierarchy)
+- **Authentication Inheritance:** Define authentication in one request and use it across multiple requests.
+- **Header Inheritance:** Specify headers in one request and utilize them in other requests.
+- **URL Concatenation:** Join the base URL and the target HTTP URL.
+- **Insecure Requests:** Mark requests as insecure using the `@insecure` tag.
+- **Clear Requests:** Use the `@clear` tag to clear request attributes.
+<!-- - **Script Inclusion:** Easily incorporate scripts to run default tests. -->
 
-
-#### example 1 (basic auth)
-
+#### Example 1: Basic Authentication
 ```http
-@name(base)  # <-- base is used to identify
+@name(base)  # <-- "base" identifies the base request
 GET "https://httpbin.org/"
 basicauth("username", "password")
 header1: headervalue1
 
-@name(sub): base # sub inherets base's auth and headers
+@name(sub): base  # "sub" inherits authentication and headers from "base"
 GET "/basic-auth/username/password"
 header2: headervalue2
 ```
 
-#### example 1 (digest auth)
-
+#### Example 2: Digest Authentication
 ```http
-@name(base)  # <-- base is used to identify
+@name(base)  # <-- "base" identifies the base request
 GET "https://httpbin.org"
 digestauth("username", "password")
 header1: headervalue1
 
-@name(sub): base # sub inherets base's auth and headers
+@name(sub): base  # "sub" inherits authentication and headers from "base"
 GET "/basic-auth/username/password"
 header2: headervalue2
 ```
 
-
-#### JWT
-
+#### JWT Authorization
 ```http
-# creates a base
-# which gathers token for each request sets it as variable
-# also, sets authorization header 
+# Create a base request
+# This base request collects the token for each subsequent request and sets it as a variable
+# It also sets the "Authorization" header in subsequent requests
 @name("base")
 GET "http://localhost:3000/api"
 "Authorization" : "{{auth=}}"
@@ -64,14 +53,14 @@ GET "http://localhost:3000/api"
 client.global.set("auth", response.headers.valueOf("Authorization"));
 
 client.test("is 200", function(){
-    client.assert(response.status ===200, "status is 200")
+    client.assert(response.status === 200, "status is 200")
 })
 
 %}
 
 /*
-    using script inherit. log `login` unwraps authorazation header from token/header
-    and checks if response code is 200
+    Using script inheritance. The "Login" request unwraps the authorization header from the token/header
+    and checks if the response code is 200.
 */
 @name("Login") : "base"
 POST "/login"
@@ -81,10 +70,11 @@ json({
 })
 
 /*
-    using script inherit. log `self` sets authorization header from earlier api. will check and update authorization header according to the latest.
-    runs tests also
+    Using script inheritance. The "self" request sets the authorization header from the earlier API request.
+    It will check and update the authorization header according to the latest data and run tests.
 */
 @name("self") : "base"
 GET "/self"
-
 ```
+
+The "extend" feature in dothttp provides a powerful and flexible way to structure and manage your HTTP requests, making it easier to reuse and customize common settings across multiple requests.

@@ -1,20 +1,21 @@
 ---
-title: Ordering
-slug: order
----
+title: Request Ordering in Dothttp
+slug: request-order
 
-Dothttp has lot of keywords. using one in different place can cause errors. for Running without errors. one use keep this under blanket
+Dothttp incorporates a variety of keywords, and using them in the wrong order can lead to errors. To ensure error-free execution, it's essential to maintain a structured approach.
 
+The recommended order for composing a Dothttp request is as follows:
 
-Order is
-1. [name](./multidef.md) Opitonal
-2. [flags(@insecure/@clear)](./extra_args.md) Optional
-3. Url (required)
-4. [basicauth/digestauth](./auth.md) Optional
-5. [certificates](./certificates.md) Optional
-6. [urlparams](./request-basics.md#url-params) Optional
-7. [payload](./request-basics.md#payload) Optional
-8. [script](./test_scripts.md) Optional
+0. [**Import**](./import.md) (Optional)
+1. [**Name**](./multidef.md) (Optional)
+2. [**Flags (@insecure/@clear)**](./extra_args.md) (Optional)
+3. **URL** (Required)
+4. [**Basicauth/Digestauth**](./auth.md) (Optional)
+5. [**Certificates**](./certificates.md) (Optional)
+6. [**URL Parameters**](./request-basics.md#url-params) (Optional)
+7. [**Payload**](./request-basics.md#payload) (Optional)
+8. [**Test Scripts**](./test_scripts.md) (Optional)
 
+Please note that the order may evolve in the future, but we will make efforts to maintain compatibility with older versions to support existing implementations.
 
-Ordering may change in future, but we will most likely want to support old versions.
+This structured order ensures a clear and consistent approach to creating Dothttp requests, reducing the likelihood of errors and enhancing the readability of your scripts.
