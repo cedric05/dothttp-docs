@@ -1,6 +1,6 @@
 ---
 title: Features of Dothttp
-slug: dothttp-features
+slug: features
 ---
 
 To get started with Dothttp, please visit the [Dothttp Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=ShivaPrasanth.dothttp-code&ssr=false#qna) for installation. With this extension installed, you can explore and experience all the remarkable features that Dothttp has to offer.

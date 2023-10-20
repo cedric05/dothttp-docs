@@ -1,6 +1,5 @@
 ---
 title: extension
-
 slug: extension
 ---
 

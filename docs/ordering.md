@@ -1,6 +1,6 @@
 ---
 title: Request Ordering in Dothttp
-slug: request-order
+slug: order
 ---
 
 Dothttp incorporates a variety of keywords, and using them in the wrong order can lead to errors. To ensure error-free execution, it's essential to maintain a structured approach.

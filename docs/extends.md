@@ -1,6 +1,6 @@
 ---
 title: Extending Requests in dothttp
-slug: request-extension
+slug: extend
 ---
 
 The "extend" feature in dothttp allows users to inherit request authentication and headers from a parent request. This feature is especially useful for creating a hierarchy of requests where one request can use the authentication and headers defined in another ("parent") request, and potentially override them if necessary.

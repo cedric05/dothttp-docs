@@ -1,6 +1,6 @@
 ---
 title: Enhanced HTTP File Organization with Imports
-slug: http-file-import
+slug: import
 ---
 
 Starting with version 0.0.42a12, users now have the capability to define and import multiple HTTP files using the `import <filename>;` syntax.

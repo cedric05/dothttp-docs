@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Dothttp
-slug: start
+slug: /
 ---
 
 ## Introduction to Dothttp

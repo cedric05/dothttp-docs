@@ -1,6 +1,6 @@
 ---
 title: Basics of Dothttp Requests
-slug: dothttp-basics
+slug: request-basics
 ---
 
 ## Supported HTTP Methods
