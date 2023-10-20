@@ -4,9 +4,16 @@
         <title>dothttp Blog</title>
         <link>https://docs.dothttp.dev/blog</link>
         <description>dothttp Blog</description>
-        <lastBuildDate>Sun, 13 Aug 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Oct 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[dothttp-runner 1.0.3, 1.0.4, 1.0.6 Release Notes]]></title>
+            <link>https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.4-1.0.5-1.0.6</link>
+            <guid>dothttp-runner 1.0.3, 1.0.4, 1.0.6 Release Notes</guid>
+            <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Updates on the latest extension releases.]]></description>
+        </item>
         <item>
             <title><![CDATA[dothttp-runner 1.0.3]]></title>
             <link>https://docs.dothttp.dev/blog/2023/08/13/dothttp-extensions-1.0.3</link>
@@ -22,11 +29,11 @@
             <description><![CDATA[extension release update.]]></description>
         </item>
         <item>
-            <title><![CDATA[dothttp-runner 1.0.0]]></title>
+            <title><![CDATA[Version 1.0.0 of dothttp-runner]]></title>
             <link>https://docs.dothttp.dev/blog/2022/12/15/dothttp-extensions-1.0.0</link>
-            <guid>dothttp-runner 1.0.0</guid>
+            <guid>Version 1.0.0 of dothttp-runner</guid>
             <pubDate>Thu, 15 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[extension release update.]]></description>
+            <description><![CDATA[An update on the extension release.]]></description>
         </item>
         <item>
             <title><![CDATA[dothttp-runner 0.0.64]]></title>
