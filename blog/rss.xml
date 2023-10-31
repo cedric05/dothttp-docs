@@ -8,9 +8,16 @@
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[dothttp-runner 1.0.3, 1.0.4, 1.0.6 Release Notes]]></title>
+            <title><![CDATA[dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes]]></title>
             <link>https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.4-1.0.5-1.0.6</link>
-            <guid>dothttp-runner 1.0.3, 1.0.4, 1.0.6 Release Notes</guid>
+            <guid>dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes</guid>
+            <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Updates on the latest extension releases.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes]]></title>
+            <link>https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.7-1.0.8-1.0.9</link>
+            <guid>dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes</guid>
             <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Updates on the latest extension releases.]]></description>
         </item>
