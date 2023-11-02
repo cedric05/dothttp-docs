@@ -5,7 +5,7 @@ slug: flags
 
 ### Insecure
 
-While development in local, dev environments most of us uses self signed certificates. By default dothttp will verify certificates, incase of one wants to use self signed certificates
+In local development environments, self-signed certificates are often used. By default, dothttp verifies certificates. However, you can bypass this verification by using `@insecure` after `@name`.
 
 Use  `@insecure` after `@name` 
 
@@ -13,20 +13,32 @@ Use  `@insecure` after `@name`
 ```http
 @name('with-key-and-cert')
 @insecure
-https://client.badssl.com/
+GET https://client.badssl.com/
 certificate(cert="{{cert}}",key="{{key}}")
 ```
 
 ### Clear
 
-When one wants to clear all session variables use
-
-Use  `@clear` after `@name` 
+To clear all session variables, simply add @clear after @name.
 
 #### Example
 ```http
 @name('with-key-and-cert')
 @clear
-https://client.badssl.com/
+GET https://client.badssl.com/
 certificate(cert="{{cert}}",key="{{key}}")
+```
+
+### Proxy
+
+Dothttp allows us to make HTTP/HTTPS requests through a proxy using ('http.proxy', 'proxy-url') or ('https.proxy', 'proxy-url').
+
+
+#### Example
+
+```http
+@name('make http call via proxy')
+('http.proxy', 'http://127.0.0.1:2828')
+GET "https://<url>
+
 ```
