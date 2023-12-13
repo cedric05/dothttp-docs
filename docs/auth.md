@@ -49,6 +49,61 @@ GET "https://httpbin.org/digest-auth/20202/username/password/md5"
 digestauth("username", "password")
 ```
 
+## Azure Auth
+
+Azure supports multiple types of authentication mechanisms. dothttp supports three different types of version. 
+
+### Azure Cli Auth
+
+dothttp leverages azure cli for getting auth token
+
+#### Syntax
+
+`azurecli(<scope>)`
+
+`scope` here is optional
+
+#### Example:
+
+```http
+@name(azurecli)
+GET "https://httpbin.org/digest-auth/20202/username/password/md5"
+azurecli("username", "password")
+```
+
+### Azure Client Secret auth
+
+#### Syntax
+
+`azurespsecret(tenant_id, client_id, client_secret, scope)`
+
+`scope` is optional here.
+
+#### Example:
+
+```http
+@name("azure_sp")
+GET "https://management.azure.com/"
+```
+
+### Azure Client Certificate Auth
+
+#### Syntax
+
+`azurespcert(tenant_id, client_id, certificate_path, scope)`
+
+`Scope`` here is optional
+
+#### Example:
+
+```http```
+@name("azure_cert")
+GET "https://management.azure.com/"
+azurespcert(tenant_id="{{tenant_id}}", client_id="{{client_id}}", certificate_path="{{certificate_path}}", scope="{{scope}}")
+```
+
+`scope`` here is optional
+
 
 ## AWS Signature v4 Authentication
 
