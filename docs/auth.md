@@ -84,6 +84,7 @@ azurecli("username", "password")
 ```http
 @name("azure_sp")
 GET "https://management.azure.com/"
+azurespsecret(tenant_id, client_id, certificate_path, scope)
 ```
 
 ### Azure Client Certificate Auth
@@ -96,7 +97,7 @@ GET "https://management.azure.com/"
 
 #### Example:
 
-```http```
+```http
 @name("azure_cert")
 GET "https://management.azure.com/"
 azurespcert(tenant_id="{{tenant_id}}", client_id="{{client_id}}", certificate_path="{{certificate_path}}", scope="{{scope}}")
