@@ -88,19 +88,22 @@ For more examples visit https://www.jetbrains.com/help/idea/http-response-handli
 
 Execution follows of request follows this order.
 
-7. **Pre request script**
-1. Property resolution (default properties in script)
-2. Dynamic Property resoluiton (`$randomStr`...)
-4. Headers resolution
-3. Auth resolution
-5. Body resolution
-6. certificate (if exists)
-8. request completion
-9. **test script**
+1. Load flags
+2. **Init Script execution**
+3. Property resolution (default properties in script)
+4. Dynamic Property resoluiton (`$randomStr`...)
+5. Headers resolution
+6. Auth resolution
+7. Body resolution
+8. certificate (if exists)
+9. request completion
+2. **Pre request script**
+1. Request execution
+10. **test script**
 
 ### Availaible libraries
 
-Having pre request scripts are completely sandboxed so not to harm. here are list of method libraires availabile.
+Pre-request scripts operate within a secure sandbox environment to prevent any potential harm. Below is a list of available method libraries:
 
 1. math
 2. hashlib
@@ -109,21 +112,31 @@ Having pre request scripts are completely sandboxed so not to harm. here are lis
 5. csv
 6. uuid
 7. base64
-8. `client` (dothttp client)
-   1. `request` (dothttp current executing request)
-      1. `headers`
-      2. `query`
-      3. `payload`
-        1. `data` (attribute/text exists if postdata is text)
-        2. `json` (attribute/(json/dict) exists if postdata is json )
-        2. `header` (attribute/text exists if posted data content-type is defined)
-        3. `filename` (attribute/text exists if postdata is to be read from file)
-        4. `files` (attribute/list exists if postdata is multipart)
-   2. `response` (availaible for test scripts)
-   3. `properties`(python `dictionary`)
-        1. `set` (to update a property)
-        2. `clear` (to delete a property)
-        3. `clear_all` (to clear all properties)
+8. datetime
+9. yaml
+10. json
+11. open
+12. urllib
+13. cryptography
+14. `client` (dothttp client)
+    - `request` (current executing request)
+        - `headers`
+        - `query`
+        - `payload`
+            - `data` (exists if postdata is text)
+            - `json` (exists if postdata is json/dict)
+            - `header` (exists if posted data content-type is defined)
+            - `filename` (exists if postdata is to be read from file)
+            - `files` (exists if postdata is multipart)
+            - `set_data(<data>)` (method to update post data)
+            - `set_json(<json>)` (method to update json data)
+            - `set_filename(<filename>)` (method to update post file name)
+            - `set_files(<files>)` (method to update multipart file data)
+    - `response` (available for test scripts)
+    - `properties` (Python dictionary)
+        - `set()` (to update a property)
+        - `clear()` (to delete a property)
+        - `clear_all()` (to clear all properties)
 
 
 
@@ -138,12 +151,24 @@ Some of its uses
 - Some computation
 
 
+### InIt Script
+
+In addition to PreRequest, there is also an Init script available. Init script/functions are executed prior to loading URL, payload, headers, or any similar components. This functionality proves beneficial when you need to establish variables before loading URL, payload, or headers.
+
+
 #### Writing
 
 Pre request scripts are nothing but methods prefixed with `pre` defined in script section of dothttp request. 
 
+Init scripts are essentially methods prefixed with `init` that are defined within the script section of a dothttp request. These scripts execute prior to any pre-request actions, allowing for the initialization of variables or setup procedures before the request is made.
+
 ```python
+def init_1():
+    # example of init script
+    client.properties.set("hai", "value")
+
 def pre_request1():
+    # example for pre request script
     # sets new header
     client.request.headers.setdefault("hai", "bye")
 

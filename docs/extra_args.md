@@ -42,3 +42,29 @@ Dothttp allows us to make HTTP/HTTPS requests through a proxy using ('http.proxy
 GET "https://<url>
 
 ```
+
+
+### No Parent Script
+
+When executing, Dothttp typically attempts to load and execute the test script of the parent. While this behavior is advantageous in certain scenarios, there might be cases where running tests in the current target is undesirable. By employing the @no_parent_script flag, Dothttp disregards the execution of the parent script if the flag is present.
+
+
+#### Example
+
+```http
+# In this example, despite inheriting the request definition from `base`, tests will not be executed due to the presence of the `@no_parent_script` flag
+@name('sample'): "base"
+@no_parent_script
+GET "https://<url>"
+
+@name('base')
+GET "https://<url>"
+
+> {%
+
+def init_set_variables():
+    client.properties.set('key', 'value')
+
+%} python
+
+```
