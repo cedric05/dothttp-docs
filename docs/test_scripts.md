@@ -137,6 +137,10 @@ Pre-request scripts operate within a secure sandbox environment to prevent any p
         - `set()` (to update a property)
         - `clear()` (to delete a property)
         - `clear_all()` (to clear all properties)
+    - `infile_properties`
+        - `get()` (to get defined infile property, set will not update or used)
+    - `env_properties`
+        - `get()` (to get properties enabled from env, set will not update or used)
 
 
 
