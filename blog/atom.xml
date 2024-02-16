@@ -99,13 +99,6 @@
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 0.0.58]]></title>
-        <id>dothttp-runner 0.0.58</id>
-        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.58"/>
-        <updated>2022-08-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[extension release update.]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[dothttp-runner 0.0.59]]></title>
         <id>dothttp-runner 0.0.59</id>
         <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.59"/>
@@ -116,6 +109,13 @@
         <title type="html"><![CDATA[dothttp-runner 0.0.60]]></title>
         <id>dothttp-runner 0.0.60</id>
         <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.60"/>
+        <updated>2022-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[extension release update.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 0.0.58]]></title>
+        <id>dothttp-runner 0.0.58</id>
+        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.58"/>
         <updated>2022-08-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
