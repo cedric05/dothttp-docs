@@ -67,8 +67,8 @@ dothttp leverages azure cli for getting auth token
 
 ```http
 @name(azurecli)
-GET "https://httpbin.org/digest-auth/20202/username/password/md5"
-azurecli("username", "password")
+GET "https://management.azure.com/<azure-resource-id>/<operation>"
+azurecli("scope")
 ```
 
 ### Azure Client Secret auth
@@ -84,7 +84,7 @@ azurecli("username", "password")
 ```http
 @name("azure_sp")
 GET "https://management.azure.com/"
-azurespsecret(tenant_id, client_id, certificate_path, scope)
+azurespsecret(tenant_id, client_id, client_secret, scope)
 ```
 
 ### Azure Client Certificate Auth
