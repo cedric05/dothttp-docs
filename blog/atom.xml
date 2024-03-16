@@ -8,15 +8,15 @@
     <subtitle>dothttp Blog</subtitle>
     <icon>https://docs.dothttp.dev/img/rocket.svg</icon>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.16 Release Notes]]></title>
-        <id>dothttp-runner 1.0.16 Release Notes</id>
+        <title type="html"><![CDATA[dothttp-runner 1.0.19 Release Notes]]></title>
+        <id>dothttp-runner 1.0.19 Release Notes</id>
         <link href="https://docs.dothttp.dev/blog/2024/03/16/dothttp-extensions-1.0.19"/>
         <updated>2024-03-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.16 Release Notes]]></title>
-        <id>dothttp-runner 1.0.16 Release Notes</id>
+        <title type="html"><![CDATA[dothttp-runner 1.0.17-1.0.18 Release Notes]]></title>
+        <id>dothttp-runner 1.0.17-1.0.18 Release Notes</id>
         <link href="https://docs.dothttp.dev/blog/2024/02/25/dothttp-extensions-1.0.17-1.0.18"/>
         <updated>2024-02-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
@@ -120,13 +120,6 @@
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 0.0.58]]></title>
-        <id>dothttp-runner 0.0.58</id>
-        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.58"/>
-        <updated>2022-08-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[extension release update.]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[dothttp-runner 0.0.59]]></title>
         <id>dothttp-runner 0.0.59</id>
         <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.59"/>
@@ -137,6 +130,13 @@
         <title type="html"><![CDATA[dothttp-runner 0.0.60]]></title>
         <id>dothttp-runner 0.0.60</id>
         <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.60"/>
+        <updated>2022-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[extension release update.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 0.0.58]]></title>
+        <id>dothttp-runner 0.0.58</id>
+        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.58"/>
         <updated>2022-08-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
