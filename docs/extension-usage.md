@@ -67,24 +67,28 @@ Properties are confined to particular file. if user wants to use it across multi
 For more information on properties visit [here](./varibles.md)
 
 
-### Dothttp Properties json file
+### Dothttp Environment json file
 
 Properties are volatile and defined for particular file. dothttp provides setting properties via defining environment. (create `.dothttp.json` file)
 
 ![check here](/img/extension-environmment-showcase.jpg). 
 
-Each key in that json provides seperate environment (define multiple properties for each key).
+Each Top Level key in that json file creates seperate environment and all second level keys are propertys for that specific ennvironemt.
 
 1. Enable a Particualr Environment (section of properties defined in `.dothttp.json`)
 2. Disable a Particualr Environment
 3. Disable All Environments
+
+
+### Configure
+
+In the Dothttp Notebook, the top `configure` option allows for the customization of the `.dothttp.json` file.
 
 ### History
 
 Users can view list of past requests made. (seperated by day to day.)
 
 ![check here](/img/dothttp-history.jpg). 
-
 
 ### Restart
 

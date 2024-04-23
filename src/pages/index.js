@@ -37,6 +37,16 @@ const features = [
       </>
     ),
   },
+  {
+    title: "ecosystem",
+    imageUrl: 'img/ecosystem.png',
+    link: 'https://github.com/cedric05/dothttp/wiki/Dothttp-Ecosystem',
+    description: (
+      <>
+        Dothttp internally is developed using multiple small projects. 
+      </>
+    )
+  }
 ];
 
 function Feature({imageUrl, title, description, link}) {
