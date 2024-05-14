@@ -57,6 +57,18 @@ Azure supports multiple types of authentication mechanisms. dothttp supports thr
 
 dothttp leverages azure cli for getting auth token
 
+#### Azure CLI Authentication Issue
+
+When using Azure CLI for authentication, it utilizes the 'az' command to generate an access token. However, in Windows environments, Azure CLI checks for updates to the azure-cli package. If an update is available, it prompts the user for input.
+
+In Windows, when utilizing `cmd`, it opens a new terminal instance, which leads Azure CLI to believe that a tty is available. Consequently, it prompts the user for input, causing requests to hang.
+
+To mitigate this issue, it's recommended to disable automatic updates by executing the following command:
+
+`az config set auto-upgrade.enable=no`
+
+Subsequently, ensure to manually update Azure CLI as needed to ensure smooth functionality with Dothttp.
+
 #### Syntax
 
 `azurecli(<scope>)`
