@@ -292,7 +292,7 @@ For more examples, consider exploring the [Dothttp Playground](https://ghpage.do
 
 ### Output
 
-Dothttp allows you to save the HTTP response directly to a file. To do this, simply append >> "<full file path>" after your HTTP definition.
+Dothttp allows you to save the HTTP response directly to a file. To do this, simply append `>> "<full file path>"` after your HTTP definition.
 
 #### Example:
 
