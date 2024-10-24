@@ -300,3 +300,22 @@ Dothttp allows you to save the HTTP response directly to a file. To do this, sim
 GET "https://req.dothttp.dev"
 >> "/tmp/out.resp.txt"
 ```
+
+
+### Math expressions
+
+dothttp can expand simple arthematic expressions in json if they are in braces in json. 
+
+#### Example:
+
+```http
+POST "https://req.dothttp.dev"
+json(
+
+     {
+          "wait_time": (3*60), // 3 minutes in seconds,
+          "print": "hai",
+     }
+)
+
+above is a simple example but it helps simplify reading/making requests
