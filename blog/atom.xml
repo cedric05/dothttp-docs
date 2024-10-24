@@ -8,16 +8,16 @@
     <subtitle>dothttp Blog</subtitle>
     <icon>https://docs.dothttp.dev/img/rocket.svg</icon>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.20 - 1.0.26 Release Notes]]></title>
-        <id>dothttp-runner 1.0.20 - 1.0.26 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2024/03/16/dothttp-extensions-1.0.20-1.0.26"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.19 Release Notes]]></title>
+        <id>dothttp-runner 1.0.19 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2024/03/16/dothttp-extensions-1.0.19"/>
         <updated>2024-03-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.19 Release Notes]]></title>
-        <id>dothttp-runner 1.0.19 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2024/03/16/dothttp-extensions-1.0.19"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.20 - 1.0.26 Release Notes]]></title>
+        <id>dothttp-runner 1.0.20 - 1.0.26 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2024/03/16/dothttp-extensions-1.0.20-1.0.26"/>
         <updated>2024-03-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
