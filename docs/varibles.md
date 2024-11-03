@@ -127,11 +127,11 @@ curl -X POST \
 -d '{"full name": "john Z4gi1r8IEX", "name": "john Z4gi1r8IEX", "height": 51}' \
 https://httpbin.org/post
 ```
-## uuid
+### uuid
 
 uuid is completely random string with 36 char length
 
-### Example
+#### Example
 
 ```http
 POST "https://httpbin.org/post"
@@ -144,7 +144,7 @@ json(
 )
 ```
 
-## randomSlug
+### randomSlug
 `randomSlug` or `randomLoremSlug`
 
 we’ll see random, human-readable slugs (e.g., brave-purple-penguin) in the web development world. These slugs offer the uniqueness of a number ID but can be more playful and fun.
@@ -154,7 +154,7 @@ we’ll see random, human-readable slugs (e.g., brave-purple-penguin) in the web
 `{{$randomSlug:2}}` --> create slug with 3 (`brave-ranga`)
 
 
-### example
+#### example
 
 ```http
 POST "https://httpbin.org/post"
@@ -167,7 +167,7 @@ json(
 )
 ```
 
-## timestamp
+### timestamp
 
 While testing, uniquely identifiying request is hard,  one can use timestamp (epoch) in headers or queryparams to distinguish from ther requests
 
@@ -175,7 +175,7 @@ usage:
 
 `{{$timestamp}}` --> generates `1629338487`  (current timestamp)
 
-### Example:
+#### Example:
 ```http
 POST "https://httpbin.org/post"
 json(
@@ -186,3 +186,38 @@ json(
 
 )
 ```
+
+## System Command
+
+Environment file variables and properties defined in a file or through the command line are static. However, some variables—such as `access_token` or `sts`—are time-sensitive and must be generated dynamically when needed.
+
+**System Command Variables** are those that can be generated on demand by running a command in the command line.
+
+To define a system command variable, create a key-value pair in the `$commands` section of your environment file. Here’s an example:
+
+```json
+{
+  "$commands": {
+    "access_token": "az account get-access-token"
+  }
+}
+```
+
+In this example, the `access_token` is set up to be generated dynamically by executing the specified command when accessed.
+
+
+## Os Environment Variables:
+
+To use an OS environment variable in an HTTP file, prefix the variable name with DOTHTTP_ENV_.
+
+Example:
+Define or export a variable, such as DOTHTTP_ENV_date, to use `{{date}}` it in the following HTTP request:
+
+```http
+Copy code
+GET https://req.dothttp.dev/get
+json({
+  "data": "{{date}}"
+})
+```
+In this example, DOTHTTP_ENV_date can be accessed as `{{date}}` within the HTTP request.

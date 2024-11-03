@@ -123,8 +123,14 @@ azurespcert(tenant_id="{{tenant_id}}", client_id="{{client_id}}", certificate_pa
 Aws signature v4 authentication is used for interacting with amazonaws apis
 
 Syntax:
+When both region and service decodeable from url: `awsauth(<accessId>, <secretKey>)`
+            or
+When region decodable from url but not service: `awsauth(<accessId>, <secretKey>, <service>)`
+            or
+When both region and service not decodable from url: `awsauth(<accessId>, <secretKey>, <service>, <region>)`
+            or
+When STS: `awsauth(<accessId>, <secretKey>, <service>, <region>, <session_token>)` 
 
-`awsauth(<accessId>, <secretKey>, <service>, <region>)`
 
 ```http
 @name('simple s3, list buckets')

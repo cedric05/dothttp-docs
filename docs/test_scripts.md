@@ -118,7 +118,9 @@ Pre-request scripts operate within a secure sandbox environment to prevent any p
 11. open
 12. urllib
 13. cryptography
-14. `client` (dothttp client)
+14. requests
+15. jsonschema
+16. `client` (dothttp client)
     - `request` (current executing request)
         - `headers`
         - `query`
