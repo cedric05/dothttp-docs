@@ -70,7 +70,20 @@ config: `dothttp.conf.agent` defaults to `http://localhost:5000/`. change this c
 ### Dothttp Open in Notebook 
 
 
-althouth there is support notebook files, some devs want to use old `http` files for executing requests. extension suggests moving to notebook, which can be annoying. turnof those notifications via setting it to `true` 
+although there is support notebook files, some devs want to use old `http` files for executing requests. extension suggests moving to notebook, which can be annoying. turnof those notifications via setting it to `true` 
 
 
 config: `dothttp.conf.hideopennotebookfromfile` defaults to `false`
+
+
+### Reponse History
+
+The VSCode extension saves history in notebook mode, allowing users to view previously executed requests and their responses. 
+
+Max number of requests to save is configurable via  `dothttp.conf.notebook.numofresponses` (defaults to `5`)
+
+### Diagnostics
+
+Dothttp Vscode Extension can save diagnostic information in output for debugging vscode extension. By default its set to false, can be enabled to share diagnostics.
+
+config: `dothttp.conf.diagnostics` (defaults to `false`)

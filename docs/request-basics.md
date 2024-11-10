@@ -193,6 +193,52 @@ json({
 
 [Try it in your browser](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVcWcX5eRrVXAogoJSXmJuqZKWglJWfkaeQkp+npAOVSExPVVKwUjAy4KrVBAAJqBcN)
 
+- Json Payload Supports variable substition at object level for example
+
+>> ```http
+>> POST http://httpbin.org/post
+>> json({
+>>      "data" : {{data}}
+>> })
+
+>> ```
+>> where property file can have
+
+>> ```json
+>> {
+>>    "*": {
+>>          "data": {
+>>                  "name": "data",
+>>                  "firstName": "prasanth"
+>>             }
+>>        }
+>> }
+>> ```
+
+>> payload will look like, 
+>> ```json
+>> {
+>>    "data": {
+>>         "name" : "data",
+>>         "firstName": "prasanth"
+>>      }
+>> }
+>> ```
+
+- Allows Unquoted keys and values if they are alphanumeric and begin with an alphabetic character
+>> For Example:
+>> ```http
+>> GET "https://httpbin.org/post
+>> json(
+>> {
+>>        // this lets users easy to write payloads especially for json.     
+>>      firstName : ranga
+>> }
+>> )
+>> ```
+>> This still works  
+
+
 ### URL-Encoded Payload
 
 URL-encoded payloads are commonly used in web requests when the content-type is not specified. The syntax for URL-encoded payloads is the same as for JSON payloads. Using URL-encoded payloads sets the `content-type` to `application/x-www-form-urlencoded` by default, which can also be overridden.
@@ -313,8 +359,8 @@ POST "https://req.dothttp.dev"
 json(
 
      {
-          "wait_time": (3*60), // 3 minutes in seconds,
-          "print": "hai",
+>> "wait_time": (3*60), // 3 minutes in seconds,
+>> "print": "hai",
      }
 )
 ```
