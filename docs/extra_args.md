@@ -7,7 +7,11 @@ slug: flags
 
 In local development environments, self-signed certificates are often used. By default, dothttp verifies certificates. However, you can bypass this verification by using `@insecure` after `@name`.
 
+Insecure flag also lets child/grand child reqeust to extend system-command properties. check properties section for more information. 
+
 Use  `@insecure` after `@name` 
+
+
 
 #### Example
 ```http
