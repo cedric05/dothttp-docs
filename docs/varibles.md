@@ -69,7 +69,7 @@ curl -X POST \
 https://httpbin.org/post
 ```
 
-## Environment
+## Dothttp Environment
 
 passing properties from command line is not always handy. one can define
 
@@ -210,14 +210,29 @@ In this example, the `access_token` is set up to be generated dynamically by exe
 
 To use an OS environment variable in an HTTP file, prefix the variable name with DOTHTTP_ENV_.
 
-Example:
+#### Example:
 Define or export a variable, such as DOTHTTP_ENV_date, to use `{{date}}` it in the following HTTP request:
 
 ```http
-Copy code
 GET https://req.dothttp.dev/get
 json({
   "data": "{{date}}"
 })
 ```
 In this example, DOTHTTP_ENV_date can be accessed as `{{date}}` within the HTTP request.
+
+
+## Math Expression:
+
+You can use simple math expressions that you may not want to evaluate immediately for debugging purposes. Dothttp handles the expansion and substitution for you.
+
+#### Example:
+```http
+POST https://httpbin.org/post
+json(
+  {
+    # here instead of using 3600, we use 1*60*60
+    "secondsInHour": "{{$expr:1*60*60}}",
+  }
+)
+```
