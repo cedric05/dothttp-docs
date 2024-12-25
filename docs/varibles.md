@@ -69,6 +69,17 @@ curl -X POST \
 https://httpbin.org/post
 ```
 
+## Variable Reuse
+
+Variables can be derived from existing variables using the variable template feature with the following syntax:
+
+`{{var3=p'{var1} {var2}'}}`
+
+For example, if `var1=ram` and `var2=ranga`, then `var3` will be computed as `ram ranga`.
+
+This feature facilitates variable reuse efficiently.
+
+
 ## Dothttp Environment
 
 passing properties from command line is not always handy. one can define
