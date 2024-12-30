@@ -23,10 +23,10 @@ To get started with Dothttp, please visit the [Dothttp Visual Studio Code Extens
 - [Commenting in Dothttp](comments.md)
 
 ### Variable Support
-- [Working with Variables](varibles.md)
-    - [In-File Variables](varibles.md#variables)
-    - [Environment Variables from an Env File](varibles.md#environment)
-    - [Individual Variables](varibles.md#individual)
+- [Working with Variables](variables.md)
+    - [In-File Variables](variables.md#variables)
+    - [Environment Variables from an Env File](variables.md#environment)
+    - [Individual Variables](variables.md#individual)
 
 ### Writing Test Scripts
 - [Testing with Dothttp](test_scripts.md)

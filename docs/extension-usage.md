@@ -64,7 +64,7 @@ Most icons and its actions are self explanatiory but when in need, User can hove
 Properties are confined to particular file. if user wants to use it across multiple files visit [this](#dothttp-properties-json-file)
 
 
-For more information on properties visit [here](./varibles.md)
+For more information on properties visit [here](./variables.md)
 
 
 ### Dothttp Environment json file

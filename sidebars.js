@@ -9,7 +9,7 @@ module.exports = {
         'import',
         'request-basics',
         'auth',
-        'varibles',
+        'variables',
         'comments',
         'multidef',
         'certificates',
