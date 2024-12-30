@@ -6,13 +6,14 @@ slug: variables
 
 ## Variables
 
-one can define variables in http file via `{{var}}`. define it once and use it everywhere
+one can define variables in http file via `var name = "some value"`. define it once and use it everywhere
 
 #### example 1:
 
 ```shell
+var name = "get";
 //test.http
-GET https://httpbin.org/{{var=get}}
+GET https://httpbin.org/{{name}}
 ? path = "{{var}}"
 // curl -X GET 'https://httpbin.org/get?path=get'
 ```
@@ -116,12 +117,14 @@ using $randomStr will generate random string of random length.
 - random bool ( $randomBool)
 
 ```http
+var name = randomStr(10);
+var height = randomInt(2);
 //test.http
 POST https://httpbin.org/post
 json({
-    "full name":  "john {{name=$randomStr:10}}",
+    "full name":  "john {{name}}",
     "name":  "john {{name}}",
-    "height": {{$randomInt:2}},
+    "height": {{height}},
 })
 ```
 name --> shiva + "randomString of length 10 chars"
@@ -145,11 +148,12 @@ uuid is completely random string with 36 char length
 #### Example
 
 ```http
+var uuid = uuid();
 POST "https://httpbin.org/post"
 json(
   {
     // generates random uuid
-    "uuid": "{{$uuid}}"
+    "uuid": "{{uuid}}"
   }
 
 )
@@ -168,11 +172,12 @@ we’ll see random, human-readable slugs (e.g., brave-purple-penguin) in the web
 #### example
 
 ```http
+var slug = randomSlug();
 POST "https://httpbin.org/post"
 json(
   {
     // creates slug with human readable random
-    "slug": "{{$randomSlug:10}}"
+    "slug": "{{slug}}"
   }
 
 )
@@ -188,11 +193,12 @@ usage:
 
 #### Example:
 ```http
+var currentTime = timestamp();
 POST "https://httpbin.org/post"
 json(
   {
     // creates current timestamp
-    "timestamp": "{{$timestamp}}"
+    "timestamp": "{{currentTime}}"
   }
 
 )
