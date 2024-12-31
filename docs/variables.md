@@ -6,98 +6,74 @@ slug: variables
 
 ## Variables
 
-one can define variables in http file via `var name = "some value"`. define it once and use it everywhere
+Variables can be defined in an HTTP file using the syntax: `var name = "some value"`. Once defined, they can be reused throughout the file.
 
-#### example 1:
+### Supported Data Types
 
-```shell
-var name = "get";
-//test.http
-GET https://httpbin.org/{{name}}
-? path = "{{var}}"
-// curl -X GET 'https://httpbin.org/get?path=get'
-```
+1. **Math Expressions**:  
+   Syntax: `var var2 = (2 + 3 + var1);`  
+   - Parentheses are mandatory.
 
+2. **String Interpolations**:  
+   Syntax: `var var3 = $'ranga {var2}';`  
+   - The `$` symbol is mandatory.
 
-[try in browser here](https://cedric05.github.io/dothttp-playground/#eJzT1y9JLS7RyygpKeBydw1RADGKrfT1QXRSZp5eflG6fnV1WWKRbXpqSW0tl71CQWJJhoKtghJYtLZWiUtfXyG5tChHQTdCAWSCOjYjgJrtQRpBpqgDABPjJ6k=)
+3. **JSON Data**:  
+   Syntax: `var var4 = {'ram': 'ranga'};`
 
-`python -m dothttp test.http`
+4. **Numbers**:  
+   Syntax: `var var4 = 10;`
 
-In the above `httpdef`, var is set to `get`. one can overwrite it via
+5. **Boolean Values**:  
+   Syntax:  
+   - `var var5 = true;`  
+   - `var var5 = false;`
 
-`python -m dothttp test.http --properties var=post`
+6. **Functions**:  
+   - `var var6 = randomInt(2);`  
+     Generates a two-digit integer.  
+   - `var var1 = randomStr(2);`  
+     Generates a two-letter string.  
+   - `var var2 = randomFloat(3);`  
+     Generates a random float.  
+   - `var var3 = uuid();`  
+     Generates a UUID.  
+   - `var var4 = randomSlug();`  
+     Generates a slug.  
+   - `var var5 = timestamp();`  
+     Generates the current timestamp.
 
-producing
+Once defined, these variables can be used anywhere using the syntax `{{var_name}}`.
 
-`curl -X GET 'https://httpbin.org/post?path=post'`
-
-#### example 2:
+#### Example:
 
 ```http
-//test.http
-POST https://httpbin.org/post
+var var_name = "ranga";
+var query_key = "query_key";
+var query = "query_value";
+
+POST "https://httpbin.org/POST
+?"{{query_key}}"="{{query_value}}"
 json({
-  "firstname": "{{name=john}}",
-  "lastname": "{{lastname=doe}}",
-  "location": "hyderabad",
-// "location": "delhi",
-  "full name": "{{name}} {{lastname}}",
+  "var_name": {{var_name}}
 })
 ```
 
+## Dothttp Environment & Properties
 
-[try in browser here](https://cedric05.github.io/dothttp-playground/#eJxVjc0KwjAQhO95iiUnBeneC30GBX2B1GxNSsyWZD1IyLtrFH96mhm+2VlEoSydE1nUYX88QXO5R2w6+thxuuDCWdScOW6KAtCTT1miuZLuQZfS3DCzi7XqXePB/ONPGizTt8FnI55ja7i7pWRGY58Icc0sBeffJ9MtBFg/rRV+86/pun0Aa2RE1A==)
+In scenarios where defining variables directly in HTTP files is not ideal (e.g., containing sensitive information like secrets), an environment file can be used to define variables. The environment name can be passed during execution, and all properties in the environment file will be automatically applied.
 
-curl output will be
-
-```shell
-curl -X POST \
--H 'Content-Length: 90' \
--H 'Content-Type: application/json' \
--d '{"firstname": "john", "lastname": "doe", "location": "hyderabad", "full name": "john doe"}' \
-https://httpbin.org/post
-```
-
-override via properties by passing in command line
-
-`python -m dothttp --properties name=shiva lastname=prasanth`
-
-```shell
-curl -X POST \
--H 'Content-Length: 102' \
--H 'Content-Type: application/json' \
--d '{"firstname": "shiva", "lastname": "prasanth", "location": "hyderabad", "full name": "shiva prasanth"}' \
-https://httpbin.org/post
-```
-
-## Variable Reuse
-
-Variables can be derived from existing variables using the variable template feature with the following syntax:
-
-`{{var3=p'{var1} {var2}'}}`
-
-For example, if `var1=ram` and `var2=ranga`, then `var3` will be computed as `ram ranga`.
-
-This feature facilitates variable reuse efficiently.
-
-
-## Dothttp Environment
-
-passing properties from command line is not always handy. one can define
-
-`.dothttp.json` in same directory as http file
+#### Environment File Example: `.dothttp.json`
 
 ```json
-//.dothttp.json
 {
-  "*" : {
+  "*": {
     "default": "variables"
   },
   "john": {
     "name": "jhonny",
     "lastname": "depp"
   },
-  // ironman
   "ironman": {
     "name": "robert",
     "lastname": "dny jnr"
@@ -105,112 +81,27 @@ passing properties from command line is not always handy. one can define
 }
 ```
 
-
-## random
-
-while integration testing, having to replace few fields are pain points.
-using $randomStr will generate random string of random length.
-
-- random string ($randomStr)
-- random integer ($randomInt)
-- random float( $randomFloat)
-- random bool ( $randomBool)
+#### HTTP Example:
 
 ```http
-var name = randomStr(10);
-var height = randomInt(2);
-//test.http
-POST https://httpbin.org/post
+// Place in the same directory as the HTTP file.
+// Enable the environment by passing `--env ironman`.
+POST "https://httpbin.org/post"
 json({
-    "full name":  "john {{name}}",
-    "name":  "john {{name}}",
-    "height": {{height}},
+  "ironman": "{{name}}",
+  "lastName": "{{lastname}}"
 })
 ```
-name --> shiva + "randomString of length 10 chars"
-height --> randomInteger of length 2
 
+### Properties
 
-[try in browser here](https://cedric05.github.io/dothttp-playground/#eJwL8A8OUcgoKSkottLXB9FJmXl6+UXp+gX5xSVcWcX5eRrVXApAoJRWmpOjkJeYm6pkBeRl5WfkKVRXg/i2KkWJeSn5ucElRVaGBrW1SjoQDdjUImQzUjPTM0qA8tXVUP2eeSVWRrW1Oly1mgBMty+h)
+Properties are useful for setting individual variables without defining an entire environment.
 
-made request will like below
-```shell
-curl -X POST \
--H 'Content-Length: 73' \
--H 'Content-Type: application/json' \
--d '{"full name": "john Z4gi1r8IEX", "name": "john Z4gi1r8IEX", "height": 51}' \
-https://httpbin.org/post
-```
-### uuid
+## System Command Variables
 
-uuid is completely random string with 36 char length
-
-#### Example
-
-```http
-var uuid = uuid();
-POST "https://httpbin.org/post"
-json(
-  {
-    // generates random uuid
-    "uuid": "{{uuid}}"
-  }
-
-)
-```
-
-### randomSlug
-`randomSlug` or `randomLoremSlug`
-
-we’ll see random, human-readable slugs (e.g., brave-purple-penguin) in the web development world. These slugs offer the uniqueness of a number ID but can be more playful and fun.
-
-
-`{{$randomSlug:3}}` --> create slug with 3 (`brave-purple-penguin`)
-`{{$randomSlug:2}}` --> create slug with 3 (`brave-ranga`)
-
-
-#### example
-
-```http
-var slug = randomSlug();
-POST "https://httpbin.org/post"
-json(
-  {
-    // creates slug with human readable random
-    "slug": "{{slug}}"
-  }
-
-)
-```
-
-### timestamp
-
-While testing, uniquely identifiying request is hard,  one can use timestamp (epoch) in headers or queryparams to distinguish from ther requests
-
-usage:
-
-`{{$timestamp}}` --> generates `1629338487`  (current timestamp)
+Variables and properties in an environment file or passed through the command line are static. For time-sensitive variables (e.g., `access_token`), use **System Command Variables** to generate them dynamically.
 
 #### Example:
-```http
-var currentTime = timestamp();
-POST "https://httpbin.org/post"
-json(
-  {
-    // creates current timestamp
-    "timestamp": "{{currentTime}}"
-  }
-
-)
-```
-
-## System Command
-
-Environment file variables and properties defined in a file or through the command line are static. However, some variables—such as `access_token` or `sts`—are time-sensitive and must be generated dynamically when needed.
-
-**System Command Variables** are those that can be generated on demand by running a command in the command line.
-
-To define a system command variable, create a key-value pair in the `$commands` section of your environment file. Here’s an example:
 
 ```json
 {
@@ -220,15 +111,15 @@ To define a system command variable, create a key-value pair in the `$commands` 
 }
 ```
 
-In this example, the `access_token` is set up to be generated dynamically by executing the specified command when accessed.
+In this example, the `access_token` variable is generated by running the specified command when accessed.
 
+## OS Environment Variables
 
-## Os Environment Variables:
-
-To use an OS environment variable in an HTTP file, prefix the variable name with DOTHTTP_ENV_.
+To use OS environment variables in an HTTP file, prefix the variable name with `DOTHTTP_ENV_`.
 
 #### Example:
-Define or export a variable, such as DOTHTTP_ENV_date, to use `{{date}}` it in the following HTTP request:
+
+Define or export a variable, such as `DOTHTTP_ENV_date`, and access it as `{{date}}` in the HTTP request:
 
 ```http
 GET https://req.dothttp.dev/get
@@ -236,20 +127,20 @@ json({
   "data": "{{date}}"
 })
 ```
-In this example, DOTHTTP_ENV_date can be accessed as `{{date}}` within the HTTP request.
 
+## Math Expressions
 
-## Math Expression:
-
-You can use simple math expressions that you may not want to evaluate immediately for debugging purposes. Dothttp handles the expansion and substitution for you.
+Math expressions can be used for calculations that should not be immediately evaluated. Dothttp handles their expansion and substitution.
 
 #### Example:
+
 ```http
 POST https://httpbin.org/post
 json(
   {
-    # here instead of using 3600, we use 1*60*60
-    "secondsInHour": "{{$expr:1*60*60}}",
+    # Instead of using 3600 directly, use 1*60*60.
+    "secondsInHour": "{{$expr:1*60*60}}"
   }
 )
 ```
+
