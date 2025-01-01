@@ -4,9 +4,16 @@
         <title>dothttp Blog</title>
         <link>https://docs.dothttp.dev/blog</link>
         <description>dothttp Blog</description>
-        <lastBuildDate>Tue, 31 Dec 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[dothttp-runner 1.0.38 - 1.0.39 Release Notes]]></title>
+            <link>https://docs.dothttp.dev/blog/2025/01/01/dothttp-extensions-1.0.41</link>
+            <guid>dothttp-runner 1.0.38 - 1.0.39 Release Notes</guid>
+            <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Updates on the latest extension releases.]]></description>
+        </item>
         <item>
             <title><![CDATA[dothttp-runner 1.0.38 - 1.0.39 Release Notes]]></title>
             <link>https://docs.dothttp.dev/blog/2024/12/31/dothttp-extensions-1.0.40</link>
@@ -22,16 +29,16 @@
             <description><![CDATA[Updates on the latest extension releases.]]></description>
         </item>
         <item>
-            <title><![CDATA[dothttp-runner 1.0.36 Release Notes]]></title>
-            <link>https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.36</link>
-            <guid>dothttp-runner 1.0.36 Release Notes</guid>
+            <title><![CDATA[dothttp-runner 1.0.37 Release Notes]]></title>
+            <link>https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.37</link>
+            <guid>dothttp-runner 1.0.37 Release Notes</guid>
             <pubDate>Thu, 26 Dec 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Updates on the latest extension releases.]]></description>
         </item>
         <item>
-            <title><![CDATA[dothttp-runner 1.0.37 Release Notes]]></title>
-            <link>https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.37</link>
-            <guid>dothttp-runner 1.0.37 Release Notes</guid>
+            <title><![CDATA[dothttp-runner 1.0.36 Release Notes]]></title>
+            <link>https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.36</link>
+            <guid>dothttp-runner 1.0.36 Release Notes</guid>
             <pubDate>Thu, 26 Dec 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Updates on the latest extension releases.]]></description>
         </item>
@@ -51,14 +58,14 @@
         </item>
         <item>
             <title><![CDATA[dothttp-runner 1.0.28 - 1.0.31 Release Notes]]></title>
-            <link>https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.32</link>
+            <link>https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.28 - 1.0.31</link>
             <guid>dothttp-runner 1.0.28 - 1.0.31 Release Notes</guid>
             <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Updates on the latest extension releases.]]></description>
         </item>
         <item>
             <title><![CDATA[dothttp-runner 1.0.28 - 1.0.31 Release Notes]]></title>
-            <link>https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.28 - 1.0.31</link>
+            <link>https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.32</link>
             <guid>dothttp-runner 1.0.28 - 1.0.31 Release Notes</guid>
             <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Updates on the latest extension releases.]]></description>
