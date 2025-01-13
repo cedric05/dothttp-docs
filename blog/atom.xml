@@ -2,21 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.dothttp.dev/blog</id>
     <title>dothttp Blog</title>
-    <updated>2025-01-01T00:00:00.000Z</updated>
+    <updated>2025-01-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.dothttp.dev/blog"/>
     <subtitle>dothttp Blog</subtitle>
     <icon>https://docs.dothttp.dev/img/rocket.svg</icon>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.38 - 1.0.39 Release Notes]]></title>
-        <id>dothttp-runner 1.0.38 - 1.0.39 Release Notes</id>
+        <title type="html"><![CDATA[dothttp-runner 1.0.45 - 1.0.47 Release Notes]]></title>
+        <id>dothttp-runner 1.0.45 - 1.0.47 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2025/01/13/dothttp-extensions-1.0.45 - 1.0.47"/>
+        <updated>2025-01-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.42 - 1.0.44 Release Notes]]></title>
+        <id>dothttp-runner 1.0.42 - 1.0.44 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2025/01/02/dothttp-extensions-1.0.42 - 1.0.44"/>
+        <updated>2025-01-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.41 Release Notes]]></title>
+        <id>dothttp-runner 1.0.41 Release Notes</id>
         <link href="https://docs.dothttp.dev/blog/2025/01/01/dothttp-extensions-1.0.41"/>
         <updated>2025-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.38 - 1.0.39 Release Notes]]></title>
-        <id>dothttp-runner 1.0.38 - 1.0.39 Release Notes</id>
+        <title type="html"><![CDATA[dothttp-runner 1.0.40 Release Notes]]></title>
+        <id>dothttp-runner 1.0.40 Release Notes</id>
         <link href="https://docs.dothttp.dev/blog/2024/12/31/dothttp-extensions-1.0.40"/>
         <updated>2024-12-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
@@ -29,16 +43,16 @@
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.37 Release Notes]]></title>
-        <id>dothttp-runner 1.0.37 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.37"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.36 Release Notes]]></title>
+        <id>dothttp-runner 1.0.36 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.36"/>
         <updated>2024-12-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.36 Release Notes]]></title>
-        <id>dothttp-runner 1.0.36 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.36"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.37 Release Notes]]></title>
+        <id>dothttp-runner 1.0.37 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2024/12/26/dothttp-extensions-1.0.37"/>
         <updated>2024-12-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
@@ -59,14 +73,14 @@
     <entry>
         <title type="html"><![CDATA[dothttp-runner 1.0.28 - 1.0.31 Release Notes]]></title>
         <id>dothttp-runner 1.0.28 - 1.0.31 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.28 - 1.0.31"/>
+        <link href="https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.32"/>
         <updated>2024-11-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[dothttp-runner 1.0.28 - 1.0.31 Release Notes]]></title>
         <id>dothttp-runner 1.0.28 - 1.0.31 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.32"/>
+        <link href="https://docs.dothttp.dev/blog/2024/11/10/dothttp-extensions-1.0.28 - 1.0.31"/>
         <updated>2024-11-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
@@ -197,16 +211,16 @@
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 0.0.58]]></title>
-        <id>dothttp-runner 0.0.58</id>
-        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.58"/>
+        <title type="html"><![CDATA[dothttp-runner 0.0.59]]></title>
+        <id>dothttp-runner 0.0.59</id>
+        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.59"/>
         <updated>2022-08-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 0.0.59]]></title>
-        <id>dothttp-runner 0.0.59</id>
-        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.59"/>
+        <title type="html"><![CDATA[dothttp-runner 0.0.58]]></title>
+        <id>dothttp-runner 0.0.58</id>
+        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.58"/>
         <updated>2022-08-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
