@@ -1,5 +1,5 @@
 ---
-title: dothttp-runner 1.0.38 - 1.0.39 Release Notes
+title: dothttp-runner 1.0.40 Release Notes
 author: Prasanth
 author_url: https://github.com/cedric05
 tags: [dothttp-runner, vscode]
