@@ -15,6 +15,13 @@
         <summary type="html"><![CDATA[Major upgrade with Monaco editor integration, customizable themes, and enhanced syntax highlighting]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.67 - SQLite-based History with node:sqlite]]></title>
+        <id>dothttp-runner 1.0.67 - SQLite-based History with node:sqlite</id>
+        <link href="https://docs.dothttp.dev/blog/2026/05/01/dothttp-extensions-1.0.67"/>
+        <updated>2026-05-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Migrated request history storage from better-sqlite3 to node:sqlite for better performance and native Node.js integration]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[dothttp-runner 1.0.61  Release Notes]]></title>
         <id>dothttp-runner 1.0.61  Release Notes</id>
         <link href="https://docs.dothttp.dev/blog/2025/06/27/dothttp-extensions-1.0.51"/>
@@ -225,16 +232,16 @@
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes]]></title>
-        <id>dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.4-1.0.5-1.0.6"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes]]></title>
+        <id>dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.7-1.0.8-1.0.9"/>
         <updated>2023-10-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes]]></title>
-        <id>dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.7-1.0.8-1.0.9"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes]]></title>
+        <id>dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.4-1.0.5-1.0.6"/>
         <updated>2023-10-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
@@ -295,16 +302,16 @@
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 0.0.60]]></title>
-        <id>dothttp-runner 0.0.60</id>
-        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.60"/>
+        <title type="html"><![CDATA[dothttp-runner 0.0.59]]></title>
+        <id>dothttp-runner 0.0.59</id>
+        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.59"/>
         <updated>2022-08-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 0.0.59]]></title>
-        <id>dothttp-runner 0.0.59</id>
-        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.59"/>
+        <title type="html"><![CDATA[dothttp-runner 0.0.60]]></title>
+        <id>dothttp-runner 0.0.60</id>
+        <link href="https://docs.dothttp.dev/blog/2022/08/06/dothttp-extensions-0.0.60"/>
         <updated>2022-08-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[extension release update.]]></summary>
     </entry>
