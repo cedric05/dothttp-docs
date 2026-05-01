@@ -9,11 +9,37 @@ slug: dothttp-runner-notebook
 
 Dothttp-runner provides notebook functionality recently introduced by vscode team. For using notebooks create a file with `httpbook` extension.
 
-By default as for performance reasons, notebook output just is highlighted according to language. for more support you would want to install [dotbook](https://marketplace.visualstudio.com/items?itemName=ShivaPrasanth.dotbook) and change presentation by clicking three dots near left top of notebook output.
+HTTP responses are displayed using **Monaco editor** - the same editor that powers VS Code - giving you professional-grade syntax highlighting, line numbers, code folding, and full editor features.
 
 By using notebook, one can see response in same place as request. gives you option to save response for future purpose. 
 
 provides a way to inspect headers and also inspect generated request
+
+## Response Display Features
+
+The notebook renderer uses Monaco editor to provide:
+
+- **Rich syntax highlighting** - Automatic detection for JSON, XML, HTML, CSS, JavaScript, and more
+- **Automatic formatting** - Responses are pre-formatted for readability
+- **Line numbers** - Easy reference and navigation
+- **Code folding** - Collapse/expand sections
+- **Find/replace** - Press Cmd+F (Mac) or Ctrl+F (Windows/Linux)
+- **Multi-cursor editing** - Full text selection and editing
+- **Dynamic height** - Compact display for small responses, scrollable view for large ones
+- **Theme matching** - Automatically matches your VS Code theme
+
+## Customizing Appearance
+
+You can customize how responses are displayed using these settings (available in VS Code Settings):
+
+- **Theme** (`dothttp.conf.notebook.theme`) - Choose from auto, vs, vs-dark, hc-black, hc-light
+- **Font Size** (`dothttp.conf.notebook.fontSize`) - Set size from 8 to 24 (default: 13)
+- **Font Family** (`dothttp.conf.notebook.fontFamily`) - Use your preferred monospace font
+- **Line Numbers** (`dothttp.conf.notebook.lineNumbers`) - Show/hide line numbers (on/off/relative)
+- **Minimap** (`dothttp.conf.notebook.minimap`) - Show code overview on the right (true/false)
+- **Word Wrap** (`dothttp.conf.notebook.wordWrap`) - Control line wrapping (off/on/wordWrapColumn/bounded)
+
+See the [Extension Configuration](./extension-configuration.md#notebook-renderer-settings) page for detailed information about these settings.
 
 options in response
 ![check here](/img/dothttp-notebook-explore.png)
