@@ -2,11 +2,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.dothttp.dev/blog</id>
     <title>dothttp Blog</title>
-    <updated>2026-05-01T00:00:00.000Z</updated>
+    <updated>2026-06-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.dothttp.dev/blog"/>
     <subtitle>dothttp Blog</subtitle>
     <icon>https://docs.dothttp.dev/img/rocket.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.69 - Smart CLI Selection & Stacked Headers Layout]]></title>
+        <id>dothttp-runner 1.0.69 - Smart CLI Selection &amp; Stacked Headers Layout</id>
+        <link href="https://docs.dothttp.dev/blog/2026/06/13/dothttp-extensions-1.0.69"/>
+        <updated>2026-06-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Extension now picks the newest installed dothttp CLI automatically, and the headers layout switches from side-by-side to top-and-bottom]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.70 / 1.0.71 - Per-Architecture Download URLs & Windows ARM64]]></title>
+        <id>dothttp-runner 1.0.70 / 1.0.71 - Per-Architecture Download URLs &amp; Windows ARM64</id>
+        <link href="https://docs.dothttp.dev/blog/2026/06/13/dothttp-extensions-1.0.70-1.0.71"/>
+        <updated>2026-06-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Download URL schema now uses explicit per-architecture keys and adds Windows ARM64 support; 1.0.71 hotfix ensures clients are included in the release bundle]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.68 - Request & Response Headers Side by Side]]></title>
+        <id>dothttp-runner 1.0.68 - Request &amp; Response Headers Side by Side</id>
+        <link href="https://docs.dothttp.dev/blog/2026/06/12/dothttp-extensions-1.0.68"/>
+        <updated>2026-06-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Headers tab now shows both request and response headers side by side in two columns]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dothttp-runner 1.0.67 - SQLite-based History with node:sqlite]]></title>
+        <id>dothttp-runner 1.0.67 - SQLite-based History with node:sqlite</id>
+        <link href="https://docs.dothttp.dev/blog/2026/05/02/dothttp-extensions-1.0.67"/>
+        <updated>2026-05-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Migrated request history storage from better-sqlite3 to node:sqlite for better performance and native Node.js integration]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[dothttp-runner 1.0.66 - Monaco Editor & Customizable Renderer]]></title>
         <id>dothttp-runner 1.0.66 - Monaco Editor &amp; Customizable Renderer</id>
@@ -232,16 +260,16 @@
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes]]></title>
-        <id>dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.7-1.0.8-1.0.9"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes]]></title>
+        <id>dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.4-1.0.5-1.0.6"/>
         <updated>2023-10-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes]]></title>
-        <id>dothttp-runner 1.0.4, 1.0.5, 1.0.6 Release Notes</id>
-        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.4-1.0.5-1.0.6"/>
+        <title type="html"><![CDATA[dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes]]></title>
+        <id>dothttp-runner 1.0.7, 1.0.8, 1.0.9, 1.0.10 Release Notes</id>
+        <link href="https://docs.dothttp.dev/blog/2023/10/20/dothttp-extensions-1.0.7-1.0.8-1.0.9"/>
         <updated>2023-10-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Updates on the latest extension releases.]]></summary>
     </entry>
